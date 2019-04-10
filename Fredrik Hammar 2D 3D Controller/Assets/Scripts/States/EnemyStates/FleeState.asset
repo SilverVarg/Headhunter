@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4bf79dbfe6ddf4daa98516b6c4845f, type: 3}
+  m_Script: {fileID: 11500000, guid: fde3ed53da076c04297f1dfed2547fba, type: 3}
   m_Name: FleeState
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  material: {fileID: 0}
+  moveSpeed: 6
+  material: {fileID: 2100000, guid: a399c75183f018a4a98977ad4ae72f85, type: 2}

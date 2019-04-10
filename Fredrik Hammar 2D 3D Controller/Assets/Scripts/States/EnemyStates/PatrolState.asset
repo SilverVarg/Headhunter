@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a226b274a12bc97488f3c412de1b33f6, type: 3}
+  m_Script: {fileID: 11500000, guid: dc6c48c3f35a8554db0026e4aa250cd4, type: 3}
   m_Name: PatrolState
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  material: {fileID: 0}
-  patrolPoints: []
-  chaseDistance: 0
-  hearingRange: 0
+  moveSpeed: 3
+  material: {fileID: 2100000, guid: 1fac62fea107c0b42aebf667692ba1d8, type: 2}
+  patrolPoints:
+  - {x: 70, y: 0, z: 50}
+  - {x: -80, y: 0, z: -70}
+  - {x: 50, y: 0, z: -60}
+  chaseDistance: 8
+  hearingRange: 15

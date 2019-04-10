@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3051b78e0660383488ec835be6c5cbed, type: 3}
+  m_Script: {fileID: 11500000, guid: c22960ecb414d5f46828b0fcd9953c1d, type: 3}
   m_Name: ChaseState
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  material: {fileID: 0}
-  attackDistance: 0
-  lostTargetDistance: 0
+  moveSpeed: 5
+  material: {fileID: 2100000, guid: 928c42b15ac69a947a1b61473a5a7886, type: 2}
+  attackDistance: 3
+  lostTargetDistance: 40
