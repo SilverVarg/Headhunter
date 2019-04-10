@@ -20,15 +20,18 @@ public class SpelarentreD : MonoBehaviour
     public float dynamicFriction = 0.3F;
     public float airResistance = 0.5F;
     public float staticFriction = 0.6F;
-
-    public Vector3 jumpie;
+    public State nonCorporeal;
+    private RaycastHit rayCast;
+    private RaycastHit normalofraycast;
     public LayerMask layerToCollideWith;
     private CapsuleCollider capsuleCollider;
+    private PlayerStateHandler playerStateHandler;
     public GameObject theCamera;
     float rotationX = 0;
     float rotationY = 0;
-    float minXY = 0;
-    float MaxXY = 90;
+    Vector3 Snap = new Vector3(0f, 0f, 0f);
+
+    public bool Corporeal = true;
     
     // Start is called before the first frame update
     void Start()
@@ -37,34 +40,16 @@ public class SpelarentreD : MonoBehaviour
     }
     private void Awake()
     {
+
+        playerStateHandler = GetComponent<PlayerStateHandler>();
         capsuleCollider = GetComponent<CapsuleCollider>();
     }
     // Update is called once per frame
     void Update()
     {
-      //  Vector3 CameraRelation = theCamera.transform.position -transform.position;
-      //  Quaternion Camerarotation = theCamera.transform.rotation;
-      //  CameraRelation = Camerarotation * CameraRelation;
-      //  theCamera.transform.rotation = Quaternion.Euler(CameraRelation.x, CameraRelation.y, CameraRelation.z); 
-      //  CameraRelation += transform.position;
-  //      theCamera.transform.position = CameraRelation;
-
-
-     //   Debug.Log(CameraRelation);
-     //   theCamera.transform.position = CameraRelation;
-
-
-        //     jumpie = new Vector3(0f, 0f, 0f);
-        float mouseX = Input.GetAxisRaw("Mouse X");
-        float mouseY = Input.GetAxisRaw("Mouse Y");
-        
-        rotationX -= Input.GetAxisRaw("Mouse Y") * MouseSensitivity;
-        rotationY += Input.GetAxisRaw("Mouse X") * MouseSensitivity;
-        rotationX = Mathf.Clamp(rotationX, minXY, MaxXY);
-        //    Quaternion.Euler(rotationX, rotationY, 0f);
-      //  theCamera.transform.rotation = Quaternion.Euler(rotationX, rotationY, 0f);
         Vector3 point1 = Vector3.up * ((capsuleCollider.height / 2) - capsuleCollider.radius);
         Vector3 point2 = Vector3.down * ((capsuleCollider.height / 2) - capsuleCollider.radius);
+
         //  Vector3 movement = new Vector3(0f, 0f, 0f);
         //  float horizontalMovement = Input.GetAxisRaw("Horizontal");
         //  float verticalMovement = Input.GetAxisRaw("Vertical");
@@ -74,12 +59,7 @@ public class SpelarentreD : MonoBehaviour
         grounded = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, Vector2.down, out rayCast2, groundCheckDistance + skinWidth, layerToCollideWith);
         VelocityMovmement();
         bool jump = Input.GetKeyDown(KeyCode.Space);
-        
-        if (!movement.Equals(new Vector3(0f, 0f, 0f)))
-        {
-           //   Debug.Log("movement" + movement);
-        }
-
+    
         if (grounded && rayCast2.normal.magnitude == 1)
         {
           //  Debug.Log("magn" + rayCast2.distance);
@@ -87,74 +67,103 @@ public class SpelarentreD : MonoBehaviour
         }
         if (grounded && jump)
         {
-          //  Debug.Log("heyho");
+         
             movement += Vector3.up * jumpdistance;
         }
 
         movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
 
 
+        bool capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
+
+        
+       
+        Ray ray = new Ray(rayCast.point, transform.position);
+        Debug.DrawRay(transform.position, rayCast.point, Color.cyan, 5f);
+        Debug.DrawLine(transform.position, rayCast.point, Color.green);
 
 
-        //   Quaternion q = new Vector3(0f, 0f, 0f);
-      //  CharacterController charContr = GetComponent<CharacterController>();
-          
-          bool capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
-       //   bool capsuleCast2 = Physics.CapsuleCast(point1, point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
-        // RaycastHit rayCast = Physics.BoxCast(boxCollider.center, boxCollider.size, movement.normalized, q, movement.magnitude + skinWidth, layerToCollideWith);
-        
-        // Debug.Log(charContr.center);
-        
+
         bool hitcollider = true;
         if(capsuleCast == false)
         {
             hitcollider = false;
         }
+        collision(); 
         int hitcounter = 0;
-        Vector3 skin = new Vector3(0f,0f,0f);
-        while (hitcollider == true && hitcounter < 100)
-        {
-            RaycastHit rayCast;
+   //     while (hitcollider == true && hitcounter < 100)
+   //     {
+            
             //   bool ray = Physics.BoxCast(boxCollider.center, boxCollider.size, movement.normalized,out rayCast, q, movement.magnitude + skinWidth, layerToCollideWith);
             //     rayCast = Physics.BoxCast(boxCollider.center, boxCollider.size, movement.normalized, q, movement.magnitude + skinWidth, layerToCollideWith);
            
-            capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth , layerToCollideWith);
-            if (capsuleCast == true)
-            {
+   //         capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth , layerToCollideWith);
+   //         if (capsuleCast == true)
+  //          {
              //   Debug.Log("hit");
             
-                RaycastHit normalofraycast;
-                bool checknormalofraycast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out normalofraycast, rayCast.normal.magnitude + skinWidth, layerToCollideWith);
+                
+  //              bool checknormalofraycast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out normalofraycast, rayCast.normal.magnitude + skinWidth, layerToCollideWith);
                 //      bool checknormalofraycast = Physics.BoxCast(boxCollider.center, boxCollider.size, movement.normalized, out normalofraycast, q, rayCast.normal.magnitude + skinWidth, layerToCollideWith);
-                transform.position += movement.normalized * (normalofraycast.distance - skinWidth);
-               
-                Normalforce(movement, rayCast.point);
-                Vector3 Force = ((Vector3)Normalforce(movement, rayCast.normal));
+   //             transform.position += movement.normalized * (normalofraycast.distance - skinWidth);
+    //            Snap += movement.normalized * (normalofraycast.distance - skinWidth);
+     //           Normalforce(movement, rayCast.point);
+      //          Vector3 Force = ((Vector3)Normalforce(movement, rayCast.normal));
             
-                movement = movement + Force;
+        //        movement = movement + Force;
             //    Friction(Force);
-
-
-                hitcounter++;
+          //      hitcounter++;
                
-            }
-            else
-            {
+         //   }
+          //  else
+           // {    
                 
-                
-                   
-                
-                hitcollider = false;
-                break;
-            }
-
-
+             //   hitcollider = false;
+               // break;
+           // }
             
-
+       // }
+        if(hitcounter > 90)
+        {
+            Debug.Log("hit100" + hitcounter);
         }
         //Debug.Log(movement);
         //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
-        transform.position += movement;
+        transform.position += movement - Snap;
+        Snap = new Vector3(0f, 0f, 0f);
+    }
+    public void collision()
+    {
+
+        
+        Vector3 point1 = Vector3.up * ((capsuleCollider.height / 2) - capsuleCollider.radius);
+        Vector3 point2 = Vector3.down * ((capsuleCollider.height / 2) - capsuleCollider.radius);
+        bool capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
+        int hitcounter = 0;
+        capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth, layerToCollideWith);
+        if (capsuleCast == true)
+        {
+            //   Debug.Log("hit");
+
+
+            bool checknormalofraycast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out normalofraycast, rayCast.normal.magnitude + skinWidth, layerToCollideWith);
+            //      bool checknormalofraycast = Physics.BoxCast(boxCollider.center, boxCollider.size, movement.normalized, out normalofraycast, q, rayCast.normal.magnitude + skinWidth, layerToCollideWith);
+            transform.position += movement.normalized * (normalofraycast.distance - skinWidth);
+            Snap += movement.normalized * (normalofraycast.distance - skinWidth);
+            // Normalforce(movement, rayCast.point);
+            Vector3 Force = ((Vector3)Normalforce(movement, rayCast.normal));
+
+            movement = movement + Force;
+            //    Friction(Force);
+            hitcounter++;
+
+        }
+        capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth, layerToCollideWith);
+        if (capsuleCast)
+        {
+            collision();
+        }
+
     }
     public Vector2 Normalforce(Vector3 velocity, Vector3 normal)
     {

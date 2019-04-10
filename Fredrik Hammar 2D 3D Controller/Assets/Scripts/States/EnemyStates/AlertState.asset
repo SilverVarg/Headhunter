@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AlertState
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   chaseDistance: 0

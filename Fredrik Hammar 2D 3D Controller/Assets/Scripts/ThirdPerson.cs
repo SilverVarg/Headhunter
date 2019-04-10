@@ -12,9 +12,9 @@ public class ThirdPerson : MonoBehaviour
     private float distance = 10f;
     private float currentX = 0.0f;
     private float currentY = 0.0f;
-    private float sensitivityX = 4.0f;
-    private float sensitivityY = 1.0f;
-    float minXY = 0;
+    public float sensitivityX = 4.0f;
+    public float sensitivityY = 1.0f;
+    float minXY = 1;
     float MaxXY = 50;
     //  private float MouseSensitivity = 1f;
     // Start is called before the first frame update
