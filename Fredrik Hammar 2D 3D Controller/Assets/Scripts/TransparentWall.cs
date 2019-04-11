@@ -24,23 +24,27 @@ public class TransparentWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStateHandler.current.GetType().Equals(nonCorporeal.GetType()) && !(this.gameObject.layer == LayerMask.NameToLayer("Transparent")))
+        if (playerStateHandler.current != null)
         {
-            //Debug.Log("baboi");
-            
-            Renderer.material = material;
-            this.gameObject.layer = LayerMask.NameToLayer("Transparent");
+            if (playerStateHandler.current.GetType().Equals(nonCorporeal.GetType()) && !(this.gameObject.layer == LayerMask.NameToLayer("Transparent")) && CanSeePlayer())
+            {
+                //Debug.Log("baboi");
 
-        }
-        else if (!(playerStateHandler.current.GetType().Equals(nonCorporeal.GetType())) && this.gameObject.layer == LayerMask.NameToLayer("Transparent"))
-        {
-            Renderer.material = originalMaterial;
-            this.gameObject.layer = LayerMask.NameToLayer("Geometry");
+                Renderer.material = material;
+                this.gameObject.layer = LayerMask.NameToLayer("Transparent");
+                player.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
+
+            }
+            else if (!(playerStateHandler.current.GetType().Equals(nonCorporeal.GetType())) && this.gameObject.layer == LayerMask.NameToLayer("Transparent") || !CanSeePlayer())
+            {
+                Renderer.material = originalMaterial;
+                this.gameObject.layer = LayerMask.NameToLayer("Geometry");
+                player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+            }
         }
     }
     protected bool CanSeePlayer()
     {
-        Debug.Log("playerpos" + player.transform.position);
         return !Physics.Linecast(transform.position, player.transform.position, visionMask);
     }
 }

@@ -5,9 +5,10 @@ using UnityEngine;
 public class Corporeal : PlayerBaseState
 {
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        
+        owner.gameObject.layer = LayerMask.NameToLayer("PlayerCorporeal");
+
     }
 
     // Update is called once per frame
