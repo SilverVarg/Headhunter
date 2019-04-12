@@ -29,8 +29,7 @@ public class SpelarentreD : MonoBehaviour
     private CapsuleCollider capsuleCollider;
     [HideInInspector] public PlayerStateHandler playerStateHandler;
     public GameObject theCamera;
-    float rotationX = 0;
-    float rotationY = 0;
+   
     Vector3 Snap = new Vector3(0f, 0f, 0f);
 
     
@@ -129,7 +128,7 @@ public class SpelarentreD : MonoBehaviour
             Debug.Log("hit100" + hitcounter);
         }
         //Debug.Log(movement);
-        //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
+       //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
         transform.position += movement - Snap;
         Snap = new Vector3(0f, 0f, 0f);
     }
@@ -153,9 +152,9 @@ public class SpelarentreD : MonoBehaviour
             Snap += movement.normalized * (normalofraycast.distance - skinWidth);
             // Normalforce(movement, rayCast.point);
             Vector3 Force = ((Vector3)Normalforce(movement, rayCast.normal));
-
+          //  Friction(Force);
             movement = movement + Force;
-            //    Friction(Force);
+           //  //   Friction(Force);
             hitcounter++;
 
         }
@@ -170,7 +169,7 @@ public class SpelarentreD : MonoBehaviour
     {
         if(Vector3.Dot(velocity, normal) > 0)
         {
-            return Vector3.zero;
+           // return Vector3.zero;
         }
         Vector3 projection = Vector3.Dot(velocity, normal) * normal;
         return -projection;
@@ -203,7 +202,7 @@ public class SpelarentreD : MonoBehaviour
         direction = direction.normalized;
         if (!direction.Equals(new Vector3(0f, 1.0f, 0f)))
         {
-            Debug.Log("input normalized" + direction);
+         //   Debug.Log("input normalized" + direction);
         }
         if (input.magnitude == 0)
         {
@@ -266,5 +265,9 @@ public class SpelarentreD : MonoBehaviour
             Debug.Log(movement);
         //    Debug.Log(transform.position);
         }
+    }
+    public bool NonCorporeal()
+    {
+        return playerStateHandler.current.GetType().Equals(nonCorporeal.GetType());
     }
 }
