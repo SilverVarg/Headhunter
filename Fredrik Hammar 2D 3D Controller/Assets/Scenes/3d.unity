@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43669218, g: 0.48429024, b: 0.56453836, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366924, g: 0.48429072, b: 0.56453884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 1286499025}
   - component: {fileID: 1286499024}
   - component: {fileID: 1286499029}
+  - component: {fileID: 1286499030}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -885,13 +886,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 1
-  gravityStrength: 6
+  gravityStrength: 10
   skinWidth: 0.05
   deceleration: 3
   maxspeed: 3
   turnSpeedModifier: 2
   groundCheckDistance: 0.01
-  jumpdistance: 2
+  jumpdistance: 3
   MouseSensitivity: 2
   dynamicFriction: 0.2
   airResistance: 0.5
@@ -998,6 +999,25 @@ MonoBehaviour:
     m_Bits: 2
   NonCorporeal: {fileID: 11400000, guid: 912e09977bb955e4193383b63e888349, type: 2}
   current: {fileID: 0}
+--- !u!95 &1286499030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286499023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1663122394
 GameObject:
   m_ObjectHideFlags: 0

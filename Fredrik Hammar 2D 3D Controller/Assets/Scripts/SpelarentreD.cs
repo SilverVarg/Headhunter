@@ -129,7 +129,7 @@ public class SpelarentreD : MonoBehaviour
         }
         //Debug.Log(movement);
        //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
-        transform.position += movement - Snap;
+        transform.position += movement - Snap * Time.deltaTime;
         Snap = new Vector3(0f, 0f, 0f);
     }
     public void collision()
