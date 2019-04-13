@@ -12,6 +12,8 @@ public class TransparentWall : MonoBehaviour
     private Material originalMaterial;
     private Vector3 EnterPoint;
     private bool PlayerInWall = false;
+    private SpelarentreD TreD;
+
 
     public LayerMask visionMask;
     // Start is called before the first frame update
@@ -20,7 +22,9 @@ public class TransparentWall : MonoBehaviour
         Renderer = GetComponent<MeshRenderer>();
         originalMaterial = Renderer.material;
         playerStateHandler = player.GetComponent<PlayerStateHandler>();
-        
+        TreD = player.GetComponent<SpelarentreD>();
+
+
     }
 
     // Update is called once per frame
@@ -59,6 +63,7 @@ public class TransparentWall : MonoBehaviour
         //Debug.Log("Playerhit1");
         if (col.gameObject.tag == "Player")
         {
+            RaycastHit ray = TreD.getHitWall();
             EnterPoint = player.transform.position;
         }
     }

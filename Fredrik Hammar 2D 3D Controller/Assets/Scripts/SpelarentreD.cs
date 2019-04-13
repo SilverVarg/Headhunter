@@ -23,7 +23,7 @@ public class SpelarentreD : MonoBehaviour
 
     [HideInInspector] public bool objectHeld = false;
     public State nonCorporeal;
-    private RaycastHit rayCast;
+    [HideInInspector] public RaycastHit rayCast;
     private RaycastHit normalofraycast;
     public LayerMask layerToCollideWith;
     private CapsuleCollider capsuleCollider;
@@ -140,7 +140,7 @@ public class SpelarentreD : MonoBehaviour
         Vector3 point2 = Vector3.down * ((capsuleCollider.height / 2) - capsuleCollider.radius);
         bool capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
         int hitcounter = 0;
-        capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth, layerToCollideWith);
+        capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth * Time.deltaTime, layerToCollideWith);
         if (capsuleCast == true)
         {
             //   Debug.Log("hit");
@@ -269,5 +269,9 @@ public class SpelarentreD : MonoBehaviour
     public bool NonCorporeal()
     {
         return playerStateHandler.current.GetType().Equals(nonCorporeal.GetType());
+    }
+    public RaycastHit getHitWall()
+    {
+        return rayCast;
     }
 }
