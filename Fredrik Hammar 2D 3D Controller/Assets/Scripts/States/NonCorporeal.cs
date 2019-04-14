@@ -6,10 +6,12 @@ public class NonCorporeal : PlayerBaseState
 {
     
     // Start is called before the first frame update
-    private void Awake()
+    void Start()
     {
-       // Player = owner.GetComponent<SpelarentreD>();
-     //   Player.Corporeal = false;
+        owner.gameObject.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
+
+        // Player = owner.GetComponent<SpelarentreD>();
+        //   Player.Corporeal = false;
     }
 
     // Update is called once per frame

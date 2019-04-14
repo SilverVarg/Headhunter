@@ -10,6 +10,10 @@ public class TransparentWall : MonoBehaviour
     public State nonCorporeal;
     public Material material;
     private Material originalMaterial;
+    private Vector3 EnterPoint;
+    private bool PlayerInWall = false;
+    private SpelarentreD TreD;
+
 
     public LayerMask visionMask;
     // Start is called before the first frame update
@@ -18,29 +22,63 @@ public class TransparentWall : MonoBehaviour
         Renderer = GetComponent<MeshRenderer>();
         originalMaterial = Renderer.material;
         playerStateHandler = player.GetComponent<PlayerStateHandler>();
-        
+        TreD = player.GetComponent<SpelarentreD>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerStateHandler.current.GetType().Equals(nonCorporeal.GetType()) && !(this.gameObject.layer == LayerMask.NameToLayer("Transparent")))
+        if (playerStateHandler.current != null)
         {
-            //Debug.Log("baboi");
-            
-            Renderer.material = material;
-            this.gameObject.layer = LayerMask.NameToLayer("Transparent");
+            if (playerStateHandler.current.GetType().Equals(nonCorporeal.GetType()) && !(this.gameObject.layer == LayerMask.NameToLayer("Transparent")) && CanSeePlayer())
+            {
+                //Debug.Log("baboi");
 
-        }
-        else if (!(playerStateHandler.current.GetType().Equals(nonCorporeal.GetType())) && this.gameObject.layer == LayerMask.NameToLayer("Transparent"))
-        {
-            Renderer.material = originalMaterial;
-            this.gameObject.layer = LayerMask.NameToLayer("Geometry");
+                Renderer.material = material;
+                this.gameObject.layer = LayerMask.NameToLayer("Transparent");
+                player.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
+
+            }
+            else if (!(playerStateHandler.current.GetType().Equals(nonCorporeal.GetType())) && this.gameObject.layer == LayerMask.NameToLayer("Transparent") || !CanSeePlayer())
+            {
+                if (PlayerInWall)
+                {
+                    player.transform.position = EnterPoint;
+                    PlayerInWall = false;
+                }
+                Renderer.material = originalMaterial;
+                this.gameObject.layer = LayerMask.NameToLayer("Geometry");
+                player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+            }
         }
     }
     protected bool CanSeePlayer()
     {
-        Debug.Log("playerpos" + player.transform.position);
         return !Physics.Linecast(transform.position, player.transform.position, visionMask);
+    }
+    void OnCollisionEnter(Collision col)
+    {
+        //Debug.Log("Playerhit1");
+        if (col.gameObject.tag == "Player")
+        {
+            RaycastHit ray = TreD.getHitWall();
+            EnterPoint = player.transform.position;
+        }
+    }
+    void OnCollisionStay(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            PlayerInWall = true;
+        }
+    }
+    void OnCollisionExit(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            PlayerInWall = false;
+        }
     }
 }

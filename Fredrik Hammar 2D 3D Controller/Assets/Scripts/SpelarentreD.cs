@@ -20,18 +20,18 @@ public class SpelarentreD : MonoBehaviour
     public float dynamicFriction = 0.3F;
     public float airResistance = 0.5F;
     public float staticFriction = 0.6F;
+
+    [HideInInspector] public bool objectHeld = false;
     public State nonCorporeal;
-    private RaycastHit rayCast;
+    [HideInInspector] public RaycastHit rayCast;
     private RaycastHit normalofraycast;
     public LayerMask layerToCollideWith;
     private CapsuleCollider capsuleCollider;
-    private PlayerStateHandler playerStateHandler;
+    [HideInInspector] public PlayerStateHandler playerStateHandler;
     public GameObject theCamera;
-    float rotationX = 0;
-    float rotationY = 0;
+   
     Vector3 Snap = new Vector3(0f, 0f, 0f);
 
-    public bool Corporeal = true;
     
     // Start is called before the first frame update
     void Start()
@@ -128,8 +128,8 @@ public class SpelarentreD : MonoBehaviour
             Debug.Log("hit100" + hitcounter);
         }
         //Debug.Log(movement);
-        //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
-        transform.position += movement - Snap;
+       //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
+        transform.position += movement - Snap * Time.deltaTime;
         Snap = new Vector3(0f, 0f, 0f);
     }
     public void collision()
@@ -140,7 +140,7 @@ public class SpelarentreD : MonoBehaviour
         Vector3 point2 = Vector3.down * ((capsuleCollider.height / 2) - capsuleCollider.radius);
         bool capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
         int hitcounter = 0;
-        capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth, layerToCollideWith);
+        capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, out rayCast, movement.magnitude + skinWidth * Time.deltaTime, layerToCollideWith);
         if (capsuleCast == true)
         {
             //   Debug.Log("hit");
@@ -152,9 +152,9 @@ public class SpelarentreD : MonoBehaviour
             Snap += movement.normalized * (normalofraycast.distance - skinWidth);
             // Normalforce(movement, rayCast.point);
             Vector3 Force = ((Vector3)Normalforce(movement, rayCast.normal));
-
+          //  Friction(Force);
             movement = movement + Force;
-            //    Friction(Force);
+           //  //   Friction(Force);
             hitcounter++;
 
         }
@@ -165,9 +165,12 @@ public class SpelarentreD : MonoBehaviour
         }
 
     }
-    public Vector2 Normalforce(Vector3 velocity, Vector3 normal)
+    public Vector3 Normalforce(Vector3 velocity, Vector3 normal)
     {
-
+        if(Vector3.Dot(velocity, normal) > 0)
+        {
+           // return Vector3.zero;
+        }
         Vector3 projection = Vector3.Dot(velocity, normal) * normal;
         return -projection;
     }
@@ -180,15 +183,15 @@ public class SpelarentreD : MonoBehaviour
         Quaternion cameraRotation = theCamera.transform.rotation;
         Vector3 direction = cameraRotation * input;
      //   direction.y = 0f;
-      
+        
         if (!direction.Equals(new Vector3(0f,0f,0f)))
         {
             
-          //  Debug.Log("camera rotation" + cameraRotation + "before" + input + " after" + direction);
+        //    Debug.Log("camera rotation" + cameraRotation + "before" + input + " after" + direction);
             
         }
      //   Vector3 direction = new Vector3(horizontalMo vement, 0f, verticalMovement);
-        if (grounded && verticalMovement == 1)
+        if (grounded)//&& verticalMovement == 1
         {
           direction = Vector3.ProjectOnPlane(rayCast2.normal, direction);
         }
@@ -199,7 +202,7 @@ public class SpelarentreD : MonoBehaviour
         direction = direction.normalized;
         if (!direction.Equals(new Vector3(0f, 1.0f, 0f)))
         {
-            //Debug.Log("input normalized" + direction);
+         //   Debug.Log("input normalized" + direction);
         }
         if (input.magnitude == 0)
         {
@@ -212,9 +215,9 @@ public class SpelarentreD : MonoBehaviour
     }
     public void Accelerate(Vector3 direction)
     {
-        direction.y = 0f;
+       // direction.y = 0f;
         float distance;
-        if ((direction.normalized.x * movement.normalized.x + direction.normalized.y * movement.normalized.y < 0))
+        if ((direction.normalized.x * movement.normalized.x + direction.normalized.z * movement.normalized.z < 0))
         {
             distance = acceleration * turnSpeedModifier * Time.deltaTime;
         }
@@ -231,13 +234,14 @@ public class SpelarentreD : MonoBehaviour
     }
     public void Decellerate(Vector3 direction)
     {
-      //  Debug.Log("decelerate");
+        
         Vector3 tempMovmement = new Vector3(0f, 0f, 0f);
         float distance = deceleration * Time.deltaTime;
         tempMovmement.y = 0f;
         tempMovmement = movement.normalized * -distance;
         if (deceleration > movement.x)
         {
+          //  Debug.Log("decelerate");
             tempMovmement.x = 0f;
             tempMovmement.z = 0f;
         }
@@ -261,5 +265,13 @@ public class SpelarentreD : MonoBehaviour
             Debug.Log(movement);
         //    Debug.Log(transform.position);
         }
+    }
+    public bool NonCorporeal()
+    {
+        return playerStateHandler.current.GetType().Equals(nonCorporeal.GetType());
+    }
+    public RaycastHit getHitWall()
+    {
+        return rayCast;
     }
 }

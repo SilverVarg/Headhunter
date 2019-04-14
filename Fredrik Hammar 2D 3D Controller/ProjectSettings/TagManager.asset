@@ -17,9 +17,9 @@ TagManager:
   - PostProcessing
   - Transparent
   - Geometry
-  - 
-  - 
-  - 
+  - Item
+  - PlayerCorporeal
+  - PlayerNonCorporeal
   - 
   - 
   - 

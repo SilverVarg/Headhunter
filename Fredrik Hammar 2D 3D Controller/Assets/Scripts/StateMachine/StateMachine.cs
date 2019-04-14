@@ -20,7 +20,10 @@ public class StateMachine : MonoBehaviour
             if (currentState == null)
                 currentState = instance;
         }
-        currentState.Enter();
+        if (currentState != null)
+        {
+            currentState.Enter();
+        }
     }
 
     public void Transition<T>() where T : State
