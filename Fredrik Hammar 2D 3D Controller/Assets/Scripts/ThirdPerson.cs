@@ -9,7 +9,7 @@ public class ThirdPerson : MonoBehaviour
     public Transform player;
 
     private Camera cam;
-    private float distance = 10f;
+    private float distance = 3000f;
     private float currentX = 0.0f;
     private float currentY = 0.0f;
     public float sensitivityX = 4.0f;
