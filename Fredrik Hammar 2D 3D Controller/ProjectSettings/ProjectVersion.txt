@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 m_EditorVersion: 2018.3.11f1
+=======
+<<<<<<< HEAD
+m_EditorVersion: 2018.3.12f1
+=======
+m_EditorVersion: 2018.3.8f1
+>>>>>>> 5ef4f6fe398bf2764a1552d4098cd0a9debb91a4
+>>>>>>> 90ab507c47d4a69c2e78aec43dfa4728078dd436
