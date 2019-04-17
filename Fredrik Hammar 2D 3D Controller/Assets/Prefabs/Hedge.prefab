@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5434806421518974156}
   - component: {fileID: 5434806421518974157}
   - component: {fileID: 5434806421518974158}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Hedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5434806421518974159}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -13475.66, y: 1318, z: 44619.57}
-  m_LocalScale: {x: 7000, y: 2600, z: 1600}
+  m_LocalScale: {x: 9699.791, y: 2000, z: 1600}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
