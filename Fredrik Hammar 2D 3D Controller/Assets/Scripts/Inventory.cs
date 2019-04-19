@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    // Property for maintaining single instance
     public static Inventory Instance
     {
         get
@@ -37,6 +39,9 @@ public class Inventory : MonoBehaviour
         // Make this single instance
         ThisInstance = this;
     }
+
+
+
     //----------------------------------------------------
     public static void AddItem(GameObject GO)
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryItem : MonoBehaviour
 {
-    public enum ITEMTYPE {SONGBIRD, SALT};
+    public enum ITEMTYPE {BALL};
     public ITEMTYPE Type;
     public Sprite GUI_Icon = null;
 
