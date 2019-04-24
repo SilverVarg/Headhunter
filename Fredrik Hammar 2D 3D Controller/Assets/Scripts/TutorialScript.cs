@@ -15,9 +15,7 @@ public class TutorialScript : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("enter trigger");
-
+    {        
         if (other.CompareTag("Player"))
         {
             scroll.SetActive(true);
