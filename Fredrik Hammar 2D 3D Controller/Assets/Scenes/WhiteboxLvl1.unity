@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1627,8 +1627,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6c98ba85802302f40a4fdbd28c1bab45, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 0.8
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1636,7 +1636,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 3.3632145
-  MaxDistance: 5.4861546
+  MaxDistance: 7.4558344
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -1646,14 +1646,14 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.61303675
-      value: 1
-      inSlope: -1.6318759
-      outSlope: -1.6318759
+      time: 0.61978114
+      value: 0.49842072
+      inSlope: -1.9306641
+      outSlope: -1.9306641
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.2358595
     - serializedVersion: 3
       time: 1
       value: 0
@@ -3297,16 +3297,16 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 014c138686868b64d90513a82385244a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 0.5
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.934576
-  MaxDistance: 12.47753
+  MinDistance: 1
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -3316,37 +3316,46 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.23518887
+      time: 0.1
       value: 1
-      inSlope: -4.253602
-      outSlope: -4.253602
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.47037774
+      time: 0.2
       value: 0.5
-      inSlope: -1.0634005
-      outSlope: -1.0634005
+      inSlope: -2.5009959
+      outSlope: -2.5009959
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.7778374
-      value: 0.17500305
-      inSlope: -0.7299827
-      outSlope: -0.7299827
+      time: 0.4
+      value: 0.25
+      inSlope: -0.62524897
+      outSlope: -0.62524897
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.8735616
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7785767
+      value: 0.06442261
+      inSlope: -0.54584444
+      outSlope: -0.54584444
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.39698172
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -0.23528263
-      outSlope: -0.23528263
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -4895,7 +4904,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: dead4f9e63b7e9d4d9b9bb82fcf992bd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.85
   Loop: 1
   Mute: 0
   Spatialize: 0

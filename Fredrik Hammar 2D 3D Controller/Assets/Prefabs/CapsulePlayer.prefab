@@ -198,7 +198,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7261173493929830816}
   - component: {fileID: 7261173493929830822}
-  - component: {fileID: 7261173493929830823}
   - component: {fileID: 7261173493929830821}
   m_Layer: 0
   m_Name: Camera
@@ -263,14 +262,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7261173493929830823
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7261173493929830817}
-  m_Enabled: 1
 --- !u!114 &7261173493929830821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,6 +567,7 @@ GameObject:
   - component: {fileID: 7261173494524950699}
   - component: {fileID: 7261173494524950702}
   - component: {fileID: 7261173494524950701}
+  - component: {fileID: 2079187973}
   m_Layer: 12
   m_Name: CapsulePlayer
   m_TagString: Player
@@ -729,3 +721,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!81 &2079187973
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261173494524950708}
+  m_Enabled: 1
