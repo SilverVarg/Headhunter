@@ -15,6 +15,12 @@ public class PickUp : MonoBehaviour
     private Transform ItemPlacer;
     private GameObject ItemPlacerGameObject;
     private float timer = 0;
+    private int objectsInInventory = 0;
+    // Variables taken from Jussi's inventoryItem code
+    public enum ITEMTYPE { BALL, BALL2, BALL3 };
+    public ITEMTYPE Type;
+    public Sprite GUI_Icon = null;
+
     void Awake()
     {
         TreD = Player.GetComponent<SpelarentreD>();
@@ -67,22 +73,22 @@ public class PickUp : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E) && TreD.objectHeld == false && thisobjectisheld == false)
                 {
+                    Inventory.AddItem(gameObject);
                     rigid.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
-
                     // Debug.Log("E");
                     Item.transform.position = Player.transform.position + new Vector3(0, 1, 0);
                     // Item.rigidbody.
                     Item.transform.parent = Player.transform;
                     thisobjectisheld = true;
-                    TreD.objectHeld = true;
+                    objectsInInventory++;
+                    if (objectsInInventory == 2)
+                        TreD.objectHeld = true;
 
                     // Item.transform.SetParent(Player.transform.parent);
                 } 
             }
             
                 
-            
-
         }
     }
 }

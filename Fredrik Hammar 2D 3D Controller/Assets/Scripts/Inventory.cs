@@ -61,7 +61,7 @@ public class Inventory : MonoBehaviour
             // If item is not active, then it becomes new slot
             if(!Item.gameObject.activeSelf)
             {
-                Item.GetComponent<Image>().sprite = GO.GetComponent<InventoryItem>().GUI_Icon;
+                Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
                 Item.gameObject.SetActive(true);
                 return;
             }
