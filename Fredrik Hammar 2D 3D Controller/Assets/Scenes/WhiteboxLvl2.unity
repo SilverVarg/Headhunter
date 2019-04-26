@@ -608,7 +608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 66095642}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pickups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 95371368}
   - component: {fileID: 95371367}
   - component: {fileID: 95371366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 100691343}
   - component: {fileID: 100691342}
   - component: {fileID: 100691341}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Safekey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 137106272}
   - component: {fileID: 137106271}
   - component: {fileID: 137106270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,7 +1620,7 @@ GameObject:
   - component: {fileID: 144213438}
   - component: {fileID: 144213437}
   - component: {fileID: 144213436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Safe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2201,7 +2201,7 @@ GameObject:
   - component: {fileID: 217630980}
   - component: {fileID: 217630979}
   - component: {fileID: 217630978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 249519966}
   - component: {fileID: 249519965}
   - component: {fileID: 249519964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Oil canister
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2812,7 +2812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 270937235}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door2ndfloor_Symbols
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3174,7 +3174,7 @@ GameObject:
   - component: {fileID: 296128518}
   - component: {fileID: 296128517}
   - component: {fileID: 296128516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3947,7 +3947,7 @@ GameObject:
   - component: {fileID: 349115915}
   - component: {fileID: 349115914}
   - component: {fileID: 349115913}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door2ndfloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4349,7 +4349,7 @@ GameObject:
   - component: {fileID: 397864080}
   - component: {fileID: 397864079}
   - component: {fileID: 397864078}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5757,7 +5757,7 @@ GameObject:
   - component: {fileID: 564161293}
   - component: {fileID: 564161292}
   - component: {fileID: 564161291}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Front_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6362,7 +6362,7 @@ GameObject:
   - component: {fileID: 734069506}
   - component: {fileID: 734069505}
   - component: {fileID: 734069504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9491,7 +9491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237233339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9601,7 +9601,7 @@ GameObject:
   - component: {fileID: 1245672860}
   - component: {fileID: 1245672859}
   - component: {fileID: 1245672858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10391,7 +10391,7 @@ GameObject:
   - component: {fileID: 1355458601}
   - component: {fileID: 1355458600}
   - component: {fileID: 1355458599}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12424,7 +12424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678626752}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Statue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13126,7 +13126,7 @@ GameObject:
   - component: {fileID: 1733523232}
   - component: {fileID: 1733523231}
   - component: {fileID: 1733523230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crank_hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14251,7 +14251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834187335}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Statue (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14373,7 +14373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843704112}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Statues
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14499,7 +14499,7 @@ GameObject:
   - component: {fileID: 1878637527}
   - component: {fileID: 1878637526}
   - component: {fileID: 1878637525}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14518,7 +14518,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6c98ba85802302f40a4fdbd28c1bab45, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -15063,7 +15063,7 @@ GameObject:
   - component: {fileID: 1950288784}
   - component: {fileID: 1950288783}
   - component: {fileID: 1950288782}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
