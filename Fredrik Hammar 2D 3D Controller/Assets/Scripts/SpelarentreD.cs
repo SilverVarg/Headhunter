@@ -81,7 +81,7 @@ public class SpelarentreD : MonoBehaviour
           //  Debug.Log(movement);
         }
         bool jump = Input.GetKeyDown(KeyCode.Space);
-        sprinting = Input.GetKeyDown(KeyCode.LeftShift);
+        sprinting = Input.GetKey(KeyCode.LeftShift);
         
         if (grounded && rayCast2.normal.magnitude == 1)
         {
@@ -94,23 +94,21 @@ public class SpelarentreD : MonoBehaviour
             Jumping = true;
            // movement += Vector3.up * jumpdistance;
         }
-        // movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+         movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
         if (grounded2 && toground == true)
         {
             toground = false;
-            movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+            // movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
         }
         if (!grounded2)
         {
             toground = true;
-            movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+          //  movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
         }
         if (Jumping) {
-            movement.y += rayCast2.point.y + jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime;
-            if (grounded)
-            {
-                Jumping = false;
-            }
+            movement.y +=  jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime;
+            Debug.Log("Jumpheight" + ( jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime));
+          
          }
        
 
@@ -144,6 +142,11 @@ public class SpelarentreD : MonoBehaviour
         Snap = new Vector3(0f, 0f, 0f);
         acceleration = originalAcceleration;
         maxspeed = Originalmaxspeed;
+        if (grounded && Jumping)
+        {
+            //Debug.Log("hitGround");
+            Jumping = false;
+        }
     }
     public void collision()
     {
@@ -197,7 +200,7 @@ public class SpelarentreD : MonoBehaviour
         }
         if (sprinting)
         {
-            acceleration += sprintAcceleration;
+           // acceleration += sprintAcceleration;
             maxspeed += sprintMaxSpeed;
 
         }

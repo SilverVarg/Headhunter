@@ -7708,6 +7708,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7261173494524950699, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261173494524950699, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: jumpdistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261173494524950699, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: sprintMaxSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261173494524950699, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: maxspeed
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 889808fb603f6b347a49083dd6051571, type: 3}
 --- !u!1001 &934663470
