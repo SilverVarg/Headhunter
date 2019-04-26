@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e020f2c9793f34e4491b5fa143783b8c, type: 3}
-  m_Name: AttackState
+  m_Script: {fileID: 11500000, guid: 63c7fe23c5af88441ada579ece5476fc, type: 3}
+  m_Name: BeginAttack
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  material: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
-  chaseDistance: 10
-  cooldown: 1
+  moveSpeed: 3
+  material: {fileID: 2100000, guid: a399c75183f018a4a98977ad4ae72f85, type: 2}

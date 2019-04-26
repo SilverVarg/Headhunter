@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     {
         get
         {
-            if(ThisInstance==null)
+            if (ThisInstance == null)
             {
                 GameObject InventoryObject = new GameObject("Inventory");
                 ThisInstance = InventoryObject.AddComponent<Inventory>();
@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         // If single object already exists then destroy
-        if(ThisInstance!=null)
+        if (ThisInstance != null)
         {
             DestroyImmediate(gameObject);
             return;
@@ -70,3 +70,4 @@ public class Inventory : MonoBehaviour
         }
 
     }
+}

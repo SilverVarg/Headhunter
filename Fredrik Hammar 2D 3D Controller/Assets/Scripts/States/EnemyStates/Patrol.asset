@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0876a379cb43fc7449ebceb421334b59, type: 3}
-  m_Name: AlertState
+  m_Script: {fileID: 11500000, guid: 8a3b1748f45ca3c4e9e2bb4e3166db58, type: 3}
+  m_Name: Patrol
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  material: {fileID: 2100000, guid: 1b0f7da1431ba6d4aafcca96957f45dc, type: 2}
-  chaseDistance: 20
+  moveSpeed: 3
+  material: {fileID: 2100000, guid: b47ad36790fd3104ca44bbbf6e079597, type: 2}
