@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public int objectsInInventory = 0;
     // Property for maintaining single instance
     public static Inventory Instance
     {
@@ -45,27 +46,27 @@ public class Inventory : MonoBehaviour
     //----------------------------------------------------
     public static void AddItem(GameObject GO)
     {
-        //Disable all colliders for added object
-        foreach (Collider C in GO.GetComponents<Collider>())
-            C.enabled = false;
-
-        // Disable renderers
-        foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
-            MR.enabled = false;
-
-        // Add to first available slot
-        for(int i=0; i<ThisInstance.ItemList.childCount; i++)
         {
-            Transform Item = ThisInstance.ItemList.GetChild(i);
+            //Disable all colliders for added object
+            foreach (Collider C in GO.GetComponents<Collider>())
+                C.enabled = false;
 
-            // If item is not active, then it becomes new slot
-            if(!Item.gameObject.activeSelf)
+            // Disable renderers
+            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
+                MR.enabled = false;
+
+            // Add to first available slot
+            for (int i = 0; i < ThisInstance.ItemList.childCount; i++)
             {
-                Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
-                Item.gameObject.SetActive(true);
-                return;
+                Transform Item = ThisInstance.ItemList.GetChild(i);
+                // If item is not active, then it becomes new slot
+                if (!Item.gameObject.activeSelf)
+                {
+                    Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
+                    Item.gameObject.SetActive(true);
+                    return;
+                }
             }
         }
-    }
 
-}
+    }

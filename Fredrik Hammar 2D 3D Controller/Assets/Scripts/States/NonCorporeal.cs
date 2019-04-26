@@ -5,12 +5,11 @@ using UnityEngine;
 public class NonCorporeal : PlayerBaseState
 {
     
-
     // Start is called before the first frame update
     void Start()
     {
         owner.gameObject.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
-        
+
         // Player = owner.GetComponent<SpelarentreD>();
         //   Player.Corporeal = false;
     }
@@ -20,7 +19,7 @@ public class NonCorporeal : PlayerBaseState
     {
 
         if (Input.GetKeyDown(KeyCode.R))
-        {            
+        {
             owner.Transition<Corporeal>();
         }
         

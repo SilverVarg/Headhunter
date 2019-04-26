@@ -7,6 +7,7 @@ public class ThirdPerson : MonoBehaviour
     public Transform lookAt;
     public Transform camTransform;
     public Transform player;
+    public LayerMask layerToCollideWith;
 
     private Camera cam;
     private float distance = 10f;
@@ -14,6 +15,7 @@ public class ThirdPerson : MonoBehaviour
     private float currentY = 0.0f;
     public float sensitivityX = 4.0f;
     public float sensitivityY = 1.0f;
+    private RaycastHit CameraRayCast;
     float minXY = 1;
     float MaxXY = 50;
     //  private float MouseSensitivity = 1f;
@@ -37,6 +39,12 @@ public class ThirdPerson : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         camTransform.position = lookAt.position + rotation * dir;
         camTransform.LookAt(lookAt.position);
+        bool PlayerToCam = Physics.Linecast(player.position, camTransform.position, out CameraRayCast, layerToCollideWith,0);
+        Debug.DrawLine(player.position, camTransform.position, Color.red, 1);
+        if (PlayerToCam)
+        {
+            camTransform.position = CameraRayCast.point;
+        }
     }
 }
 
