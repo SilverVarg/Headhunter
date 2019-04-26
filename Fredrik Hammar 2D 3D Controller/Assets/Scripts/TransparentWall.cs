@@ -13,12 +13,16 @@ public class TransparentWall : MonoBehaviour
     private Vector3 EnterPoint;
     private bool PlayerInWall = false;
     private SpelarentreD TreD;
-
-
+    private float OriginalSpeed;
+    private float speed = 10;
+    private float speedAcceleration = 0.1f;
+    private bool calculateEnterpoint = false;
+    private float skinwidth = 0.3f;
     public LayerMask visionMask;
     // Start is called before the first frame update
     void Awake()
     {
+        OriginalSpeed = speed;
         Renderer = GetComponent<MeshRenderer>();
         originalMaterial = Renderer.material;
         playerStateHandler = player.GetComponent<PlayerStateHandler>();
@@ -45,12 +49,48 @@ public class TransparentWall : MonoBehaviour
             {
                 if (PlayerInWall)
                 {
-                    player.transform.position = EnterPoint;
+                    speed += 1f * Time.deltaTime;
+                    TreD.nullMovement();
+                    if( calculateEnterpoint == false){
+
+                        
+                            EnterPoint.x -= player.transform.position.x - EnterPoint.x;
+                        
+                           
+                        
+                            EnterPoint.z -= player.transform.position.z - EnterPoint.z;
+                       
+                       
+                        
+                        
+                        calculateEnterpoint = true;
+                    }
+                    player.transform.position = Vector3.MoveTowards(player.transform.position, EnterPoint, speed * Time.deltaTime);
+                    Debug.Log("playerpos" + player.transform.position);
+                    Debug.Log("Enterpoint" + EnterPoint);
+                    if (Vector3.Distance(player.transform.position, EnterPoint) < 0.1f)
+                    {
+                        Debug.Log("hited");
+                        Renderer.material = originalMaterial;
+                        this.gameObject.layer = LayerMask.NameToLayer("Geometry");
+                        player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+                        speed = OriginalSpeed;
+                        calculateEnterpoint = false;
+                        PlayerInWall = false;
+                        
+
+                    }
+                }
+                else
+                {
+                    
+                    Renderer.material = originalMaterial;
+                    this.gameObject.layer = LayerMask.NameToLayer("Geometry");
+                    player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+                    calculateEnterpoint = false;
                     PlayerInWall = false;
                 }
-                Renderer.material = originalMaterial;
-                this.gameObject.layer = LayerMask.NameToLayer("Geometry");
-                player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+                
             }
         }
     }
@@ -65,6 +105,7 @@ public class TransparentWall : MonoBehaviour
         {
             RaycastHit ray = TreD.getHitWall();
             EnterPoint = player.transform.position;
+            
         }
     }
     void OnCollisionStay(Collision col)
