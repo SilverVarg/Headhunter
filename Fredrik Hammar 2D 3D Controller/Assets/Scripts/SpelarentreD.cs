@@ -81,7 +81,7 @@ public class SpelarentreD : MonoBehaviour
           //  Debug.Log(movement);
         }
         bool jump = Input.GetKeyDown(KeyCode.Space);
-        sprinting = Input.GetKeyDown(KeyCode.LeftShift);
+        sprinting = Input.GetKey(KeyCode.LeftShift);
         
         if (grounded && rayCast2.normal.magnitude == 1)
         {
@@ -197,7 +197,8 @@ public class SpelarentreD : MonoBehaviour
         }
         if (sprinting)
         {
-            acceleration += sprintAcceleration;
+            Debug.Log("Springting");
+           // acceleration = sprintAcceleration;
             maxspeed += sprintMaxSpeed;
 
         }
@@ -250,7 +251,7 @@ public class SpelarentreD : MonoBehaviour
         movement += (Vector3)direction * distance;
         if (movement.magnitude > maxspeed)
         {
-            Debug.Log("träffa maxspeed");
+          //  Debug.Log("träffa maxspeed");
             movement = movement.normalized * maxspeed;
         }
     }
