@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43669218, g: 0.48429024, b: 0.56453836, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366924, g: 0.48429072, b: 0.56453884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -906,18 +906,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4595398559712888307}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1286499024 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4595398560998567715, guid: 0e666e703ead82c4fb2e7aac969af5c1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4595398559712888307}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286499023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f68714f6845808b4aad26b5c6e3711fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1404397101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9017389962553328889, guid: c5f2ad74668568b468ae82cadeb18d37,
@@ -1287,18 +1275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f11fb4f2c9bc0459ac527792d0ca9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states:
-  - {fileID: 11400000, guid: 9ec6c98c3669cb14fad664e6462c406d, type: 2}
-  - {fileID: 11400000, guid: 851a2bc31b19a5240bcbdaeceb0cca92, type: 2}
-  - {fileID: 11400000, guid: cd551118bae540a429d867a94db9f09f, type: 2}
-  - {fileID: 11400000, guid: 382e6a897a684734bab9ecfe65989538, type: 2}
-  - {fileID: 11400000, guid: 9a1a231363fa09c4889e6516c1516a5b, type: 2}
-  enemyRenderer: {fileID: 0}
-  enemyAgent: {fileID: 0}
-  visionMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  player: {fileID: 1286499024}
 --- !u!195 &2096472472
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1337,6 +1313,16 @@ PrefabInstance:
         type: 3}
       propertyPath: groundCheckDistance
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595398560998567715, guid: 0e666e703ead82c4fb2e7aac969af5c1,
+        type: 3}
+      propertyPath: sprintAcceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595398560998567715, guid: 0e666e703ead82c4fb2e7aac969af5c1,
+        type: 3}
+      propertyPath: sprintMaxSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4595398560998567719, guid: 0e666e703ead82c4fb2e7aac969af5c1,
         type: 3}

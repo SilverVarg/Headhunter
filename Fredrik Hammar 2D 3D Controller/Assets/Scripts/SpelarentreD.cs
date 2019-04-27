@@ -200,7 +200,10 @@ public class SpelarentreD : MonoBehaviour
         }
         if (sprinting)
         {
-           // acceleration += sprintAcceleration;
+
+            Debug.Log("Springting");
+           // acceleration = sprintAcceleration;
+
             maxspeed += sprintMaxSpeed;
 
         }
@@ -253,7 +256,7 @@ public class SpelarentreD : MonoBehaviour
         movement += (Vector3)direction * distance;
         if (movement.magnitude > maxspeed)
         {
-            Debug.Log("träffa maxspeed");
+          //  Debug.Log("träffa maxspeed");
             movement = movement.normalized * maxspeed;
         }
     }

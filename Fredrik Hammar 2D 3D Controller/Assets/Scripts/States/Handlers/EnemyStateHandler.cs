@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyController : StateMachine
+public class EnemyStateHandler : StateMachine
 {
+
     [HideInInspector] public MeshRenderer enemyRenderer;
-    [HideInInspector] public NavMeshAgent enemyAgent;
     public LayerMask visionMask;
-    public SpelarentreD player;
+    
+     public GameObject player;
+  //  private FieldOfViewDetection FOV;
+
 
     protected override void Awake()
     {
+       // FOV = GetComponent<FieldOfViewDetection>();
+
         enemyRenderer = GetComponent<MeshRenderer>();
-        enemyAgent = GetComponent<NavMeshAgent>();
         base.Awake();
     }
+   
 }
