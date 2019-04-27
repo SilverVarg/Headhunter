@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Songbird
+  - InventoryItem
+  - ItemSlot00
+  - ItemSlot01
   layers:
   - Default
   - TransparentFX

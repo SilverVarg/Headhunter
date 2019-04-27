@@ -70,10 +70,10 @@ public class PickUp : MonoBehaviour
         {
             if (!TreD.NonCorporeal())
             {
-                if (Input.GetKeyDown(KeyCode.E) && TreD.objectHeld == false && thisobjectisheld == false)
+                if (Input.GetKeyDown(KeyCode.E) && Inventory.Instance.GetAmountOfObjectsInInventory() < 2 && thisobjectisheld == false)
                 {
                     Inventory.AddItem(gameObject);
-                    Inventory.objectsInInventory++;
+                    Inventory.Instance.CountInventory();
                     rigid.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
                     // Debug.Log("E");
                     Item.transform.position = Player.transform.position + new Vector3(0, 1, 0);

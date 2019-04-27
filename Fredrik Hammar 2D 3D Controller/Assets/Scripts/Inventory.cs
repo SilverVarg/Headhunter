@@ -5,13 +5,27 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public int objectsInInventory = 0;
+    protected int objectsInInventory = 0;
+    public void CountInventory()
+    {
+        objectsInInventory++;
+    }
+
+    public void removeOneFromInventory()
+    {
+        objectsInInventory--;
+    }
+
+    public int GetAmountOfObjectsInInventory()
+    {
+        return objectsInInventory;
+    }
     // Property for maintaining single instance
     public static Inventory Instance
     {
         get
         {
-            if(ThisInstance==null)
+            if (ThisInstance == null)
             {
                 GameObject InventoryObject = new GameObject("Inventory");
                 ThisInstance = InventoryObject.AddComponent<Inventory>();
@@ -31,7 +45,7 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         // If single object already exists then destroy
-        if(ThisInstance!=null)
+        if (ThisInstance != null)
         {
             DestroyImmediate(gameObject);
             return;
@@ -70,3 +84,24 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
+    public static void RemoveItem()
+    {if (Input.GetKeyDown(KeyCode.U))
+        {
+            Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
+            GameObject GO = itemToRemove.gameObject;
+
+            foreach (Collider C in GO.GetComponents<Collider>())
+                C.enabled = true;
+
+            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
+                MR.enabled = true;
+
+            GO.SetActive(true);
+
+            GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
+            iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
+            Inventory.Instance.removeOneFromInventory();
+        }
+    }
+}
