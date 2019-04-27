@@ -84,6 +84,7 @@ public class Inventory : MonoBehaviour
         }
 
     }
+ HEAD
 
     public static void RemoveItem()
     {if (Input.GetKeyDown(KeyCode.U))
@@ -104,4 +105,6 @@ public class Inventory : MonoBehaviour
             Inventory.Instance.removeOneFromInventory();
         }
     }
+
+ fd34071f6e3c8fdc01722a4b3d4e1379b19887e8
 }
