@@ -277,6 +277,9 @@ MonoBehaviour:
   lookAt: {fileID: 7261173494524950703}
   camTransform: {fileID: 0}
   player: {fileID: 7261173494524950703}
+  layerToCollideWith:
+    serializedVersion: 2
+    m_Bits: 0
   sensitivityX: 7
   sensitivityY: 2
 --- !u!1 &7261173493989511254
@@ -663,10 +666,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 1
+  sprintAcceleration: 6
   gravityStrength: 10
   skinWidth: 0.05
   deceleration: 3
-  maxspeed: 3
+  maxspeed: 0.2
+  sprintMaxSpeed: 1
   turnSpeedModifier: 2
   groundCheckDistance: 0.01
   jumpdistance: 3
