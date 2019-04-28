@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour
 
     }
 
-  
+
 
     // Reference to singleton object
     private static Inventory ThisInstance = null;
@@ -57,27 +57,27 @@ public class Inventory : MonoBehaviour
         ThisInstance = this;
     }
 
-    
+
 
     public static void Start()
     {
-       
+
         //ThisInstance.GetComponent<Inventory>();
-        
+
     }
 
     public static void Update()
     {
         //if (Input.GetKeyDown(KeyCode.I))
         //{
-            
+
         //    ThisInstance.enabled = !ThisInstance.enabled;
         //    Debug.Log("Knappen i trycktes ned");
         //}
     }
 
 
-//----------------------------------------------------
+    //----------------------------------------------------
     public static void AddItem(GameObject GO)
     {
         {
@@ -104,10 +104,10 @@ public class Inventory : MonoBehaviour
         }
 
     }
- HEAD
+
 
     public static void RemoveItem()
-    {if (Input.GetKeyDown(KeyCode.U))
+    { if (Input.GetKeyDown(KeyCode.U))
         {
             Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
             GameObject GO = itemToRemove.gameObject;
@@ -125,6 +125,7 @@ public class Inventory : MonoBehaviour
             Inventory.Instance.removeOneFromInventory();
         }
     }
+}
 
  fd34071f6e3c8fdc01722a4b3d4e1379b19887e8
-}
+
