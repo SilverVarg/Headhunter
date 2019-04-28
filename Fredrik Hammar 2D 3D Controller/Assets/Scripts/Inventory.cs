@@ -21,6 +21,8 @@ public class Inventory : MonoBehaviour
 
     }
 
+  
+
     // Reference to singleton object
     private static Inventory ThisInstance = null;
 
@@ -41,9 +43,27 @@ public class Inventory : MonoBehaviour
         ThisInstance = this;
     }
 
+    
+
+    public static void Start()
+    {
+       
+        //ThisInstance.GetComponent<Inventory>();
+        
+    }
+
+    public static void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+            
+        //    ThisInstance.enabled = !ThisInstance.enabled;
+        //    Debug.Log("Knappen i trycktes ned");
+        //}
+    }
 
 
-    //----------------------------------------------------
+//----------------------------------------------------
     public static void AddItem(GameObject GO)
     {
         {

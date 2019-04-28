@@ -16,7 +16,7 @@ public class PickUp : MonoBehaviour
     private GameObject ItemPlacerGameObject;
     private float timer = 0;
     // Variables taken from Jussi's inventoryItem code
-    public enum ITEMTYPE { BALL, BALL2, BALL3 };
+    public enum ITEMTYPE { BALL };
     public ITEMTYPE Type;
     public Sprite GUI_Icon = null;
 
