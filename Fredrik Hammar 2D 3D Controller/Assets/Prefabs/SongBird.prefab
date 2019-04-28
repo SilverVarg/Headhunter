@@ -123,6 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   Item: {fileID: 9017389962553328889}
+  Type: 0
+  GUI_Icon: {fileID: 0}
 --- !u!54 &9017389962553328880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,7 +152,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

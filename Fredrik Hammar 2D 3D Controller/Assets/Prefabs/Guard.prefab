@@ -14,6 +14,10 @@ GameObject:
   - component: {fileID: 5540222198682718661}
   - component: {fileID: 4170267091364204747}
   - component: {fileID: 1365603598288875047}
+  - component: {fileID: 546645703881143703}
+  - component: {fileID: 8889786159702263850}
+  - component: {fileID: 2279144368163383899}
+  - component: {fileID: 6811811549256326446}
   m_Layer: 10
   m_Name: Guard
   m_TagString: Untagged
@@ -114,7 +118,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5.8664536
+  MinDistance: 8.102732
   MaxDistance: 15
   Pan2D: 0
   rolloffMode: 2
@@ -203,3 +207,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f9ee328190bf77b4cbbe0d8f2c83faa0, type: 3}
+--- !u!114 &546645703881143703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913057006576024403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e924199e2c8d78e4e9b58675051deb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
+  moveSpots: []
+--- !u!114 &8889786159702263850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913057006576024403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6e00c352e9fd64b99019578b35a349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states:
+  - {fileID: 11400000, guid: 3f4c51e7e53ebaf42a6fc7804454ed20, type: 2}
+  - {fileID: 11400000, guid: 0524606e8c665de439ba25bc7874775a, type: 2}
+  enemyRenderer: {fileID: 0}
+  visionMask:
+    serializedVersion: 2
+    m_Bits: 5120
+  player: {fileID: 0}
+--- !u!114 &2279144368163383899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913057006576024403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e990b10c270ef4c995c1de09f57eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAngle: 180
+  maxRadius: 8
+  player: {fileID: 0}
+--- !u!143 &6811811549256326446
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913057006576024403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
