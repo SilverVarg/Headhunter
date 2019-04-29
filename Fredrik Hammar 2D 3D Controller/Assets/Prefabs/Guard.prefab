@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8889786159702263850}
   - component: {fileID: 2279144368163383899}
   - component: {fileID: 6811811549256326446}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,6 +237,8 @@ MonoBehaviour:
   states:
   - {fileID: 11400000, guid: 3f4c51e7e53ebaf42a6fc7804454ed20, type: 2}
   - {fileID: 11400000, guid: 0524606e8c665de439ba25bc7874775a, type: 2}
+  - {fileID: 11400000, guid: 269a1e9ce7cf61847932b085eefa2d01, type: 2}
+  - {fileID: 11400000, guid: 173e831e7f865514f8a7f81f087b157d, type: 2}
   enemyRenderer: {fileID: 0}
   visionMask:
     serializedVersion: 2

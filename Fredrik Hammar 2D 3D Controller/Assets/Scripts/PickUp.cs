@@ -16,9 +16,9 @@ public class PickUp : MonoBehaviour
     private GameObject ItemPlacerGameObject;
     private float timer = 0;
     // Variables taken from Jussi's inventoryItem code
-    public enum ITEMTYPE { BALL };
-    public ITEMTYPE Type;
-    public Sprite GUI_Icon = null;
+   // public enum ITEMTYPE { BALL };
+   // public ITEMTYPE Type;
+   // public Sprite GUI_Icon = null;
 
     void Awake()
     {
@@ -70,13 +70,13 @@ public class PickUp : MonoBehaviour
         {
             if (!TreD.NonCorporeal())
             {
-                if (Input.GetKeyDown(KeyCode.E) && Inventory.Instance.GetAmountOfObjectsInInventory() < 2 && thisobjectisheld == false)
+                if (Input.GetKeyDown(KeyCode.E)  && thisobjectisheld == false)
                 {
-                    Inventory.AddItem(gameObject);
+                    // Inventory.AddItem(gameObject);
  
-                    Inventory.Instance.CountInventory();
+                   // Inventory.Instance.CountInventory();
 
- fd34071f6e3c8fdc01722a4b3d4e1379b19887e8
+
                     rigid.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
                     // Debug.Log("E");
                     Item.transform.position = Player.transform.position + new Vector3(0, 1, 0);

@@ -91,7 +91,9 @@ public class SpelarentreD : MonoBehaviour
         if (grounded && jump)
         {
             Debug.Log("jump");
-            Jumping = true;
+           movement += Vector3.up * 10f;// jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime;
+           // Debug.Log("jump");
+          //  Jumping = true;
            // movement += Vector3.up * jumpdistance;
         }
          movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;

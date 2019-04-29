@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Songbird : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Songbird : MonoBehaviour
     private int musicNumber = 0;
     private bool playNextMusic = true;
     private bool PlayAllSongs = false;
+    public int goal;
+    private bool done = true;
+    
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +44,25 @@ public class Songbird : MonoBehaviour
             }
         }
     }
+    public bool donewithLevel()
+    {
+        done = false;
+        if(audioClips.Length == goal)
+        {
+            done = true;
+        }
+        return done;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if(other.tag == "Goal" && done == true)
+        {
+            Debug.Log("goal");
+            SceneManager.LoadScene(1);
+        }
+    }
+
     IEnumerator PlayTheNextMusic()
     {
         playNextMusic = false;
