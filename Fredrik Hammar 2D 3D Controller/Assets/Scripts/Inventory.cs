@@ -59,22 +59,22 @@ public class Inventory : MonoBehaviour
 
 
 
-    public static void Start()
-    {
+    //public static void Start()
+    //{
 
-        //ThisInstance.GetComponent<Inventory>();
+    //    ThisInstance.GetComponent<Inventory>();
 
-    }
+    //}
 
-    public static void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.I))
-        //{
+    //public static void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.I))
+    //    {
 
-        //    ThisInstance.enabled = !ThisInstance.enabled;
-        //    Debug.Log("Knappen i trycktes ned");
-        //}
-    }
+    //        ThisInstance.enabled = !ThisInstance.enabled;
+    //        Debug.Log("Knappen i trycktes ned");
+    //    }
+    //}
 
 
     //----------------------------------------------------
@@ -126,6 +126,4 @@ public class Inventory : MonoBehaviour
         }
     }
 }
-
- fd34071f6e3c8fdc01722a4b3d4e1379b19887e8
 

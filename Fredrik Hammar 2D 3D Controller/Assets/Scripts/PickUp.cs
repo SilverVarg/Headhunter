@@ -76,7 +76,6 @@ public class PickUp : MonoBehaviour
  
                     Inventory.Instance.CountInventory();
 
- fd34071f6e3c8fdc01722a4b3d4e1379b19887e8
                     rigid.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
                     // Debug.Log("E");
                     Item.transform.position = Player.transform.position + new Vector3(0, 1, 0);
