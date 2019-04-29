@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -622,6 +627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -804,10 +814,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 270937235}
-  - {fileID: 1951859233}
-  - {fileID: 1649853361}
-  - {fileID: 1978310}
   - {fileID: 1784386892}
+  - {fileID: 1951859233}
+  - {fileID: 1978310}
+  - {fileID: 1649853361}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -913,6 +923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -1089,7 +1104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99081305}
   - component: {fileID: 99081306}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,6 +1184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -1253,6 +1273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -1343,6 +1368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -1484,6 +1514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1574,7 +1609,7 @@ GameObject:
   - component: {fileID: 137106272}
   - component: {fileID: 137106271}
   - component: {fileID: 137106270}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1666,7 +1701,7 @@ GameObject:
   - component: {fileID: 142183291}
   - component: {fileID: 142183290}
   - component: {fileID: 142183289}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1792,7 @@ GameObject:
   - component: {fileID: 144213438}
   - component: {fileID: 144213437}
   - component: {fileID: 144213436}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Safe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1847,6 +1882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Transparent_Wall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -2081,7 +2121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196536894}
   - component: {fileID: 196536895}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: New Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2161,6 +2201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -2253,6 +2298,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2338,7 +2388,7 @@ GameObject:
   - component: {fileID: 217630980}
   - component: {fileID: 217630979}
   - component: {fileID: 217630978}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2702,6 +2752,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2853,16 +2908,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
     - target: {fileID: 5288946542460850456, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f79ebd6af2e84ea106a8f71fb1210, type: 3}
 --- !u!4 &258397500 stripped
@@ -2957,6 +3012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -3264,6 +3324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3347,6 +3412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -3548,16 +3618,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
     - target: {fileID: 5288946542460850456, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f79ebd6af2e84ea106a8f71fb1210, type: 3}
 --- !u!4 &295658044 stripped
@@ -3578,7 +3648,7 @@ GameObject:
   - component: {fileID: 296128518}
   - component: {fileID: 296128517}
   - component: {fileID: 296128516}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3669,6 +3739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -3987,6 +4062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4071,6 +4151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -4169,7 +4254,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 63c02ebbe25b6d34c97e81362aa1cc12, type: 2}
   visionMask:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 768
 --- !u!1001 &336916894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4181,6 +4266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -4267,6 +4357,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4351,6 +4446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -4442,7 +4542,7 @@ GameObject:
   - component: {fileID: 349115915}
   - component: {fileID: 349115914}
   - component: {fileID: 349115913}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Door2ndfloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4536,7 +4636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &373930587
 Transform:
   m_ObjectHideFlags: 0
@@ -4674,6 +4774,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4764,6 +4869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8797893739531863802, guid: ffa468b8d9a636242bf5758537deaf8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3274894570379928303, guid: ffa468b8d9a636242bf5758537deaf8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4843,6 +4953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -4928,6 +5043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -5046,6 +5166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -5423,6 +5548,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5512,6 +5642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -5748,6 +5883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 5913057006576024403, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5436967056045532855, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5865,7 +6005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 524736295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5880,8 +6020,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524736294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.905285, y: 6.53, z: 74.69}
-  m_LocalScale: {x: 1, y: 1.0239, z: 1.8040707}
+  m_LocalPosition: {x: -13.92, y: 6.53, z: 74.69}
+  m_LocalScale: {x: 3.7312, y: 1.0239, z: 1.8040707}
   m_Children:
   - {fileID: 7323949395345055640}
   - {fileID: 1109192613}
@@ -6037,6 +6177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6122,6 +6267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6206,6 +6356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -6298,6 +6453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6388,7 +6548,7 @@ GameObject:
   - component: {fileID: 564161293}
   - component: {fileID: 564161292}
   - component: {fileID: 564161291}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Front_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6478,6 +6638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -6569,6 +6734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6659,6 +6829,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6748,6 +6923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -7540,6 +7720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5913057006576024403, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5436967056045532855, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7660,6 +7845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7745,6 +7935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transparent_Wall (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7829,6 +8024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -7919,6 +8119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -8106,6 +8311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Transparent_Wall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -8342,6 +8552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8426,6 +8641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -8516,6 +8736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797893739531863802, guid: ffa468b8d9a636242bf5758537deaf8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3274894570379928303, guid: ffa468b8d9a636242bf5758537deaf8d,
         type: 3}
@@ -8652,11 +8877,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7261173494524950698, guid: 889808fb603f6b347a49083dd6051571,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7261173494524950699, guid: 889808fb603f6b347a49083dd6051571,
         type: 3}
       propertyPath: groundCheckDistance
@@ -8677,6 +8897,16 @@ PrefabInstance:
       propertyPath: maxspeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7261173494524950699, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: layerToCollideWith.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261173494524950698, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 889808fb603f6b347a49083dd6051571, type: 3}
 --- !u!1001 &934663470
@@ -8690,6 +8920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -8781,6 +9016,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8865,6 +9105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -8955,6 +9200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -9114,6 +9364,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -9443,7 +9698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002831998}
   - component: {fileID: 1002831999}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: New Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9856,16 +10111,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
     - target: {fileID: 5288946542460850456, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f79ebd6af2e84ea106a8f71fb1210, type: 3}
 --- !u!4 &1026592880 stripped
@@ -10022,6 +10277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5913057006576024403, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5436967056045532855, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10133,6 +10393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10229,6 +10494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10318,6 +10588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -10410,6 +10685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10500,6 +10780,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10584,6 +10869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10666,7 +10956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237233339}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10776,7 +11066,7 @@ GameObject:
   - component: {fileID: 1245672860}
   - component: {fileID: 1245672859}
   - component: {fileID: 1245672858}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11219,6 +11509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11302,6 +11597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -11397,6 +11697,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -11567,6 +11872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11657,7 +11967,7 @@ GameObject:
   - component: {fileID: 1355458601}
   - component: {fileID: 1355458600}
   - component: {fileID: 1355458599}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11761,7 +12071,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 63c02ebbe25b6d34c97e81362aa1cc12, type: 2}
   visionMask:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 768
 --- !u!1 &1360834475
 GameObject:
   m_ObjectHideFlags: 0
@@ -11828,6 +12138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -11919,6 +12234,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5913057006576024403, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5436967056045532855, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12001,9 +12321,26 @@ PrefabInstance:
       objectReference: {fileID: 460836491}
     - target: {fileID: 8889786159702263850, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
+      propertyPath: states.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889786159702263850, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 8889786159702263850, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: states.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 269a1e9ce7cf61847932b085eefa2d01,
+        type: 2}
+    - target: {fileID: 8889786159702263850, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 173e831e7f865514f8a7f81f087b157d,
+        type: 2}
     - target: {fileID: 2279144368163383899, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
       propertyPath: player
@@ -12132,7 +12469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424284008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12190,7 +12527,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 63c02ebbe25b6d34c97e81362aa1cc12, type: 2}
   visionMask:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 768
 --- !u!1001 &1463663430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12275,7 +12612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1470745283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12463,6 +12800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12602,6 +12944,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12686,6 +13033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -13013,6 +13365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13103,6 +13460,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13192,6 +13554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -13554,6 +13921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13699,11 +14071,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 928c42b15ac69a947a1b61473a5a7886, type: 2}
     - target: {fileID: 5288946542460850456, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: GUI_Icon
@@ -13715,6 +14082,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 928c42b15ac69a947a1b61473a5a7886, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f79ebd6af2e84ea106a8f71fb1210, type: 3}
 --- !u!4 &1649853361 stripped
@@ -13734,6 +14106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -13819,6 +14196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -13907,7 +14289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678626752}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Statue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14016,6 +14398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -14519,6 +14906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14609,7 +15001,7 @@ GameObject:
   - component: {fileID: 1733523232}
   - component: {fileID: 1733523231}
   - component: {fileID: 1733523230}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Crank_hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14700,6 +15092,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14787,7 +15184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741525910}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Invisible walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14823,6 +15220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -14913,6 +15315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -15095,7 +15502,7 @@ GameObject:
   - component: {fileID: 1761700814}
   - component: {fileID: 1761700813}
   - component: {fileID: 1761700812}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15332,11 +15739,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a399c75183f018a4a98977ad4ae72f85, type: 2}
     - target: {fileID: 5288946542460850456, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: GUI_Icon
@@ -15348,6 +15750,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a399c75183f018a4a98977ad4ae72f85, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f79ebd6af2e84ea106a8f71fb1210, type: 3}
 --- !u!4 &1784386892 stripped
@@ -15474,6 +15881,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15557,7 +15969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805486543}
   - component: {fileID: 1805486544}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: New Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15638,7 +16050,7 @@ GameObject:
   - component: {fileID: 1819142229}
   - component: {fileID: 1819142228}
   - component: {fileID: 1819142227}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15729,6 +16141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15818,6 +16235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
@@ -16007,7 +16429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834187335}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Statue (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16041,6 +16463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -16129,7 +16556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843704112}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Statues
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16255,6 +16682,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16346,7 +16778,7 @@ GameObject:
   - component: {fileID: 1878637527}
   - component: {fileID: 1878637526}
   - component: {fileID: 1878637525}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16912,6 +17344,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17001,6 +17438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -17147,11 +17589,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 928c42b15ac69a947a1b61473a5a7886, type: 2}
     - target: {fileID: 5288946542460850456, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: GUI_Icon
@@ -17163,6 +17600,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 257540575}
+    - target: {fileID: 5288946542460850455, guid: de1f79ebd6af2e84ea106a8f71fb1210,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 928c42b15ac69a947a1b61473a5a7886, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f79ebd6af2e84ea106a8f71fb1210, type: 3}
 --- !u!4 &1951859233 stripped
@@ -17183,7 +17625,7 @@ GameObject:
   - component: {fileID: 1970858116}
   - component: {fileID: 1970858115}
   - component: {fileID: 1970858114}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17274,6 +17716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17362,7 +17809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990984121}
   - component: {fileID: 1990984122}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17495,7 +17942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2001096911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17510,7 +17957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001096910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.405174, y: -1.2, z: 93.8}
+  m_LocalPosition: {x: -10.7, y: -1.2000008, z: 93.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 956530791}
@@ -17552,7 +17999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024886467}
   - component: {fileID: 2024886468}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17707,6 +18154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -18025,7 +18477,7 @@ GameObject:
   - component: {fileID: 2066872793}
   - component: {fileID: 2066872792}
   - component: {fileID: 2066872791}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18117,6 +18569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairCase (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18206,6 +18663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -18302,6 +18764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128403762996780901, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3128403762996777113, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
         type: 3}
@@ -18434,6 +18901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5086334027743081681, guid: 1fb66228055b3c84bbce19171c9f1c8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4664977361036022529, guid: 1fb66228055b3c84bbce19171c9f1c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18519,6 +18991,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 8797893739531863802, guid: ffa468b8d9a636242bf5758537deaf8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3274894570379928303, guid: ffa468b8d9a636242bf5758537deaf8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18592,6 +19069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StairCase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078281137642090696, guid: 747d35bfa4934f74e938bebadc87e76d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323949395345055640, guid: 747d35bfa4934f74e938bebadc87e76d,
         type: 3}
@@ -18695,6 +19177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 5913057006576024403, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5436967056045532855, guid: a58f39c8cc0591e43a5636c78b76b3d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18775,5 +19262,15 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[3]
       value: 
       objectReference: {fileID: 1634352914}
+    - target: {fileID: 8889786159702263850, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 257540575}
+    - target: {fileID: 2279144368163383899, guid: a58f39c8cc0591e43a5636c78b76b3d7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 257540583}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a58f39c8cc0591e43a5636c78b76b3d7, type: 3}

@@ -37,9 +37,13 @@ public class EnemyPatrolPoints : MonoBehaviour
             {
                 movement = dir;
             }
+           
             // move the character:
             charcon.Move(movement);
-            transform.rotation = Quaternion.LookRotation(movement);
+           
+                
+                transform.rotation = Quaternion.LookRotation(movement);
+            
             //   transform.rotation = Quaternion.Euler(0f, Quaternion.LookRotation(movement).y, 0f);
 
             if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)

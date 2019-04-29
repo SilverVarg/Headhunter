@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStateHandler : StateMachine
+public class EnemyStateHandler : EnemyStateMachine
 {
 
     [HideInInspector] public MeshRenderer enemyRenderer;

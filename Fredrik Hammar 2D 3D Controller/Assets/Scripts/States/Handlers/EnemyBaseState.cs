@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBaseState : State
+public class EnemyBaseState : EnemyState
 {
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected Material material;
@@ -10,16 +10,18 @@ public class EnemyBaseState : State
     private FieldOfViewDetection FOV;
     protected EnemyStateHandler owner;
     private EnemyPatrolPoints PatrolPoints;
+    private Boxleap boxleap;
 
     public override void Enter()
     {
         owner.enemyRenderer.material = material;
         FOV = owner.GetComponent<FieldOfViewDetection>();
         PatrolPoints = owner.GetComponent<EnemyPatrolPoints>();
+        boxleap = owner.GetComponent<Boxleap>();
         // owner.enemyAgent.speed = moveSpeed;
     }
 
-    public override void Initialize(StateMachine owner)
+    public override void Initialize(EnemyStateMachine owner)
     {
         this.owner = (EnemyStateHandler)owner;
     }
@@ -35,5 +37,13 @@ public class EnemyBaseState : State
     protected void setPatrol(bool patrol)
     {
         PatrolPoints.setPatrolling(patrol);
+    }
+    protected void SetLeap(bool set)
+    {
+        boxleap.setStopJump(set);
+    }
+    protected bool getJump()
+    {
+       return boxleap.getJumpBool();
     }
 }

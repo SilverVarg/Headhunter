@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c7fe23c5af88441ada579ece5476fc, type: 3}
   m_Name: BeginAttack
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  material: {fileID: 2100000, guid: a399c75183f018a4a98977ad4ae72f85, type: 2}
+  moveSpeed: 0
+  material: {fileID: 0}
