@@ -5,7 +5,21 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public int objectsInInventory = 0;
+    protected int objectsInInventory = 0;
+    public void CountInventory()
+    {
+        objectsInInventory++;
+    }
+
+    public void removeOneFromInventory()
+    {
+        objectsInInventory--;
+    }
+
+    public int GetAmountOfObjectsInInventory()
+    {
+        return objectsInInventory;
+    }
     // Property for maintaining single instance
     public static Inventory Instance
     {
@@ -20,6 +34,8 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
+
 
     // Reference to singleton object
     private static Inventory ThisInstance = null;
@@ -41,6 +57,24 @@ public class Inventory : MonoBehaviour
         ThisInstance = this;
     }
 
+
+
+    public static void Start()
+    {
+
+        //ThisInstance.GetComponent<Inventory>();
+
+    }
+
+    public static void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+
+        //    ThisInstance.enabled = !ThisInstance.enabled;
+        //    Debug.Log("Knappen i trycktes ned");
+        //}
+    }
 
 
     //----------------------------------------------------
@@ -70,4 +104,28 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
+
+    public static void RemoveItem()
+    { if (Input.GetKeyDown(KeyCode.U))
+        {
+            Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
+            GameObject GO = itemToRemove.gameObject;
+
+            foreach (Collider C in GO.GetComponents<Collider>())
+                C.enabled = true;
+
+            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
+                MR.enabled = true;
+
+            GO.SetActive(true);
+
+            GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
+            iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
+            Inventory.Instance.removeOneFromInventory();
+        }
+    }
 }
+
+ fd34071f6e3c8fdc01722a4b3d4e1379b19887e8
+
