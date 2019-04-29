@@ -18,7 +18,7 @@ public class PickUp : MonoBehaviour
     // Variables taken from Jussi's inventoryItem code
    // public enum ITEMTYPE { BALL };
    // public ITEMTYPE Type;
-   // public Sprite GUI_Icon = null;
+   public Sprite GUI_Icon = null;
 
     void Awake()
     {

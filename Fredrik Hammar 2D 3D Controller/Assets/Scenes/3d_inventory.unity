@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 95218073}
   - component: {fileID: 95218072}
   - component: {fileID: 95218071}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 161623201}
   - component: {fileID: 161623205}
   - component: {fileID: 161623206}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 164936791}
   - component: {fileID: 164936790}
   - component: {fileID: 164936796}
+  - component: {fileID: 164936797}
   m_Layer: 11
   m_Name: Ball
   m_TagString: InventoryItem
@@ -396,14 +397,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164936789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 259293d8a0e151e44a5a8efe76bb5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 164936789}
-  Type: 0
   GUI_Icon: {fileID: 21300000, guid: 0d2750edaa6e5b242968af7ed806bef6, type: 3}
 --- !u!135 &164936791
 SphereCollider:
@@ -506,6 +506,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &164936797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164936789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ca15742066f749b86e5a8dc0bbf1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  GUI_Icon: {fileID: 21300000, guid: 0d2750edaa6e5b242968af7ed806bef6, type: 3}
 --- !u!1 &271819588
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +674,7 @@ GameObject:
   - component: {fileID: 397075463}
   - component: {fileID: 397075467}
   - component: {fileID: 397075468}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 463679951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cubes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,7 +965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2f5c87f93001c49acaae50f8c1247c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInInventory: 0
   ItemList: {fileID: 948991394}
 --- !u!1 &753459282
 GameObject:
@@ -1231,7 +1244,7 @@ GameObject:
   - component: {fileID: 1044042391}
   - component: {fileID: 1044042390}
   - component: {fileID: 1044042389}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1337,7 @@ GameObject:
   - component: {fileID: 1099236945}
   - component: {fileID: 1099236944}
   - component: {fileID: 1099236949}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1587,7 +1600,7 @@ MonoBehaviour:
   nonCorporeal: {fileID: 11400000, guid: 912e09977bb955e4193383b63e888349, type: 2}
   layerToCollideWith:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 256
   playerStateHandler: {fileID: 0}
   theCamera: {fileID: 1663122394}
 --- !u!136 &1286499025
@@ -1732,7 +1745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 164936789}
-  Type: 0
   GUI_Icon: {fileID: 0}
 --- !u!1 &1289396569
 GameObject:
@@ -1749,6 +1761,7 @@ GameObject:
   - component: {fileID: 1289396573}
   - component: {fileID: 1289396572}
   - component: {fileID: 1289396570}
+  - component: {fileID: 1289396571}
   m_Layer: 11
   m_Name: Ball3
   m_TagString: InventoryItem
@@ -1772,7 +1785,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1289396572
+--- !u!114 &1289396571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1781,12 +1794,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1289396569}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ca15742066f749b86e5a8dc0bbf1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  GUI_Icon: {fileID: 21300000, guid: e105cc0de15282743b7461e19c98312d, type: 3}
+--- !u!114 &1289396572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289396569}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 259293d8a0e151e44a5a8efe76bb5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 1289396569}
-  Type: 0
   GUI_Icon: {fileID: 21300000, guid: e105cc0de15282743b7461e19c98312d, type: 3}
 --- !u!135 &1289396573
 SphereCollider:
@@ -1888,6 +1914,7 @@ GameObject:
   - component: {fileID: 1513849258}
   - component: {fileID: 1513849257}
   - component: {fileID: 1513849255}
+  - component: {fileID: 1513849256}
   m_Layer: 11
   m_Name: Ball2
   m_TagString: InventoryItem
@@ -1911,7 +1938,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1513849257
+--- !u!114 &1513849256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1920,12 +1947,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513849254}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ca15742066f749b86e5a8dc0bbf1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 1
+  GUI_Icon: {fileID: 21300000, guid: edb47008524f4d84ca0788f8de6699df, type: 3}
+--- !u!114 &1513849257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513849254}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 259293d8a0e151e44a5a8efe76bb5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 1513849254}
-  Type: 0
   GUI_Icon: {fileID: 21300000, guid: edb47008524f4d84ca0788f8de6699df, type: 3}
 --- !u!135 &1513849258
 SphereCollider:
@@ -2858,7 +2898,7 @@ GameObject:
   - component: {fileID: 1950342792}
   - component: {fileID: 1950342791}
   - component: {fileID: 1950342790}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
