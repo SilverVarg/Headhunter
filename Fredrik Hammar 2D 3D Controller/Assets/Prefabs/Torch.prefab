@@ -208,8 +208,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.4918647
-  MaxDistance: 5.8880587
+  MinDistance: 4.2118373
+  MaxDistance: 6.5442705
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -349,7 +349,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.8867924, g: 0.69375175, b: 0.14640439, a: 1}
   m_Intensity: 5
-  m_Range: 10.646885
+  m_Range: 15
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -366,7 +366,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3350
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
