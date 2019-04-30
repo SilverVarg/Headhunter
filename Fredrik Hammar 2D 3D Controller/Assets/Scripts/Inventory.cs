@@ -1,4 +1,3 @@
-
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,7 +78,7 @@ public class Inventory : MonoBehaviour
 
 
     //----------------------------------------------------
-    public static void AddItem(GameObject GO)
+    public void AddItem(GameObject GO)
     {
         {
             //Disable all colliders for added object
@@ -97,7 +96,7 @@ public class Inventory : MonoBehaviour
                 // If item is not active, then it becomes new slot
                 if (!Item.gameObject.activeSelf)
                 {
-                    Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
+                    Item.GetComponent<Image>().sprite = GO.GetComponent<InventoryItem>().GUI_Icon;
                     Item.gameObject.SetActive(true);
                     return;
                 }
@@ -123,7 +122,7 @@ public class Inventory : MonoBehaviour
 
             GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
             iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
-            Inventory.Instance.removeOneFromInventory();
+            Inventory.ThisInstance.removeOneFromInventory();
         }
     }
 }
