@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.436692, g: 0.48429012, b: 0.56453776, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366924, g: 0.48429072, b: 0.56453884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -403,8 +403,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 164936789}
-  Type: 0
-  GUI_Icon: {fileID: 21300000, guid: 0d2750edaa6e5b242968af7ed806bef6, type: 3}
 --- !u!135 &164936791
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -951,8 +949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2f5c87f93001c49acaae50f8c1247c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInInventory: 0
-  ItemList: {fileID: 948991394}
 --- !u!1 &753459282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,8 +1728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 164936789}
-  Type: 0
-  GUI_Icon: {fileID: 0}
 --- !u!1 &1289396569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,8 +1780,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 1289396569}
-  Type: 0
-  GUI_Icon: {fileID: 21300000, guid: e105cc0de15282743b7461e19c98312d, type: 3}
 --- !u!135 &1289396573
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1925,8 +1917,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1286499023}
   Item: {fileID: 1513849254}
-  Type: 0
-  GUI_Icon: {fileID: 21300000, guid: edb47008524f4d84ca0788f8de6699df, type: 3}
 --- !u!135 &1513849258
 SphereCollider:
   m_ObjectHideFlags: 0
