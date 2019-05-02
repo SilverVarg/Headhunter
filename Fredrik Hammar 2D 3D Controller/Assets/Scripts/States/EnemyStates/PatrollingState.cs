@@ -15,7 +15,6 @@ public class PatrollingState : EnemyBaseState
     public override void HandleUpdate()
     {
 
-
         if (InFOV() == true)
         {
             setPatrol(false);
