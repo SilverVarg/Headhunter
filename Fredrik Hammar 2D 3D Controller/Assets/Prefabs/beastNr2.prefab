@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e990b10c270ef4c995c1de09f57eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 30
+  maxAngle: 45
   maxRadius: 30
   player: {fileID: 0}
 --- !u!114 &4113603263962365829
