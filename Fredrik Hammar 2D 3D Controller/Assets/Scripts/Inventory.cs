@@ -59,11 +59,11 @@ public class Inventory : MonoBehaviour
 
 
 
-<<<<<<< HEAD
+
     public static void Start()
     {
 
-        //ThisInstance.GetComponent<Inventory>();
+        ThisInstance.GetComponent<Inventory>();
 
     }
 
@@ -78,35 +78,14 @@ public class Inventory : MonoBehaviour
     }
 
 
-    //----------------------------------------------------
+ 
     public static void AddItem(GameObject GO)
-=======
-    //public static void Start()
-    //{
 
-    //    ThisInstance.GetComponent<Inventory>();
-
-    //}
-
-    //public static void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.I))
-    //    {
-
-    //        ThisInstance.enabled = !ThisInstance.enabled;
-    //        Debug.Log("Knappen i trycktes ned");
-    //    }
-    //}
-
-
-    //----------------------------------------------------
-    public void AddItem(GameObject GO)
->>>>>>> ae1b6f71474bca9d9010feed06097a7ad25aaa14
     {
         {
-            //Disable all colliders for added object
+            // Disable all colliders for added object
             foreach (Collider C in GO.GetComponents<Collider>())
-                C.enabled = false;
+                    C.enabled = false;
 
             // Disable renderers
             foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
@@ -119,11 +98,9 @@ public class Inventory : MonoBehaviour
                 // If item is not active, then it becomes new slot
                 if (!Item.gameObject.activeSelf)
                 {
-<<<<<<< HEAD
-                    Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
-=======
+                
                     Item.GetComponent<Image>().sprite = GO.GetComponent<InventoryItem>().GUI_Icon;
->>>>>>> ae1b6f71474bca9d9010feed06097a7ad25aaa14
+
                     Item.gameObject.SetActive(true);
                     return;
                 }
@@ -133,166 +110,165 @@ public class Inventory : MonoBehaviour
     }
 
 
-    public static void RemoveItem()
-<<<<<<< HEAD
-    {
-        if (Input.GetKeyDown(KeyCode.U))
-=======
-    { if (Input.GetKeyDown(KeyCode.U))
->>>>>>> ae1b6f71474bca9d9010feed06097a7ad25aaa14
-        {
-            Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
-            GameObject GO = itemToRemove.gameObject;
+    //public static void RemoveItem()
 
-            foreach (Collider C in GO.GetComponents<Collider>())
-                C.enabled = true;
+    //{
+    //    if (Input.GetKeyDown(KeyCode.U))
 
-            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
-                MR.enabled = true;
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.U))
 
-            GO.SetActive(true);
+    //        {
+    //            Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
+    //            GameObject GO = itemToRemove.gameObject;
 
-            GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
-            iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
-<<<<<<< HEAD
-            Inventory.Instance.removeOneFromInventory();
-        }
-    }
-}
-=======
-            Inventory.ThisInstance.removeOneFromInventory();
-        }
-    }
+    //            foreach (Collider C in GO.GetComponents<Collider>())
+    //                C.enabled = true;
+
+    //            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
+    //                MR.enabled = true;
+
+    //            GO.SetActive(true);
+
+    //            GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
+    //            iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
+    //            Inventory.Instance.removeOneFromInventory();
+    //        }
+    //    }
+    //}
 }
 
 
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI;
-
-//public class Inventory : MonoBehaviour
-//{
-//    protected int objectsInInventory = 0;
-//    public void CountInventory()
-//    {
-//        objectsInInventory++;
-//    }
-
-//    public void removeOneFromInventory()
-//    {
-//        objectsInInventory--;
-//    }
-
-//    public int GetAmountOfObjectsInInventory()
-//    {
-//        return objectsInInventory;
-//    }
-//    // Property for maintaining single instance
-//    public static Inventory Instance
-//    {
-//        get
-//        {
-//            if (ThisInstance == null)
-//            {
-//                GameObject InventoryObject = new GameObject("Inventory");
-//                ThisInstance = InventoryObject.AddComponent<Inventory>();
-//            }
-//            return ThisInstance;
-//        }
-
-//    }
 
 
 
-//    // Reference to singleton object
-//    private static Inventory ThisInstance = null;
 
-//    // Root object of item list
-//    public RectTransform ItemList = null;
-//    //----------------------------------------------------
-//    // Use this for initialization
-//    private void Awake()
-//    {
-//        // If single object already exists then destroy
-//        if (ThisInstance != null)
-//        {
-//            DestroyImmediate(gameObject);
-//            return;
-//        }
+    //using System.Collections;
+    //using System.Collections.Generic;
+    //using UnityEngine;
+    //using UnityEngine.UI;
 
-//        // Make this single instance
-//        ThisInstance = this;
-//    }
+    //public class Inventory : MonoBehaviour
+    //{
+    //    protected int objectsInInventory = 0;
+    //    public void CountInventory()
+    //    {
+    //        objectsInInventory++;
+    //    }
 
+    //    public void removeOneFromInventory()
+    //    {
+    //        objectsInInventory--;
+    //    }
 
+    //    public int GetAmountOfObjectsInInventory()
+    //    {
+    //        return objectsInInventory;
+    //    }
+    //    // Property for maintaining single instance
+    //    public static Inventory Instance
+    //    {
+    //        get
+    //        {
+    //            if (ThisInstance == null)
+    //            {
+    //                GameObject InventoryObject = new GameObject("Inventory");
+    //                ThisInstance = InventoryObject.AddComponent<Inventory>();
+    //            }
+    //            return ThisInstance;
+    //        }
 
-//    public static void Start()
-//    {
-
-//        //ThisInstance.GetComponent<Inventory>();
-
-//    }
-
-//    public static void Update()
-//    {
-//        //if (Input.GetKeyDown(KeyCode.I))
-//        //{
-
-//        //    ThisInstance.enabled = !ThisInstance.enabled;
-//        //    Debug.Log("Knappen i trycktes ned");
-//        //}
-//    }
-
-
-//    //----------------------------------------------------
-//    public static void AddItem(GameObject GO)
-//    {
-//        {
-//            //Disable all colliders for added object
-//            foreach (Collider C in GO.GetComponents<Collider>())
-//                C.enabled = false;
-
-//            // Disable renderers
-//            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
-//                MR.enabled = false;
-
-//            // Add to first available slot
-//            for (int i = 0; i < ThisInstance.ItemList.childCount; i++)
-//            {
-//                Transform Item = ThisInstance.ItemList.GetChild(i);
-//                // If item is not active, then it becomes new slot
-//                if (!Item.gameObject.activeSelf)
-//                {
-//                    Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
-//                    Item.gameObject.SetActive(true);
-//                    return;
-//                }
-//            }
-//        }
-
-//    }
+    //    }
 
 
-//    public static void RemoveItem()
-//    { if (Input.GetKeyDown(KeyCode.U))
-//        {
-//            Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
-//            GameObject GO = itemToRemove.gameObject;
 
-//            foreach (Collider C in GO.GetComponents<Collider>())
-//                C.enabled = true;
+    //    // Reference to singleton object
+    //    private static Inventory ThisInstance = null;
 
-//            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
-//                MR.enabled = true;
+    //    // Root object of item list
+    //    public RectTransform ItemList = null;
+    //    //----------------------------------------------------
+    //    // Use this for initialization
+    //    private void Awake()
+    //    {
+    //        // If single object already exists then destroy
+    //        if (ThisInstance != null)
+    //        {
+    //            DestroyImmediate(gameObject);
+    //            return;
+    //        }
 
-//            GO.SetActive(true);
+    //        // Make this single instance
+    //        ThisInstance = this;
+    //    }
 
-//            GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
-//            iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
-//            Inventory.Instance.removeOneFromInventory();
-//        }
-//    }
-//}
 
->>>>>>> ae1b6f71474bca9d9010feed06097a7ad25aaa14
+
+    //    public static void Start()
+    //    {
+
+    //        //ThisInstance.GetComponent<Inventory>();
+
+    //    }
+
+    //    public static void Update()
+    //    {
+    //        //if (Input.GetKeyDown(KeyCode.I))
+    //        //{
+
+    //        //    ThisInstance.enabled = !ThisInstance.enabled;
+    //        //    Debug.Log("Knappen i trycktes ned");
+    //        //}
+    //    }
+
+
+    //    //----------------------------------------------------
+    //    public static void AddItem(GameObject GO)
+    //    {
+    //        {
+    //            //Disable all colliders for added object
+    //            foreach (Collider C in GO.GetComponents<Collider>())
+    //                C.enabled = false;
+
+    //            // Disable renderers
+    //            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
+    //                MR.enabled = false;
+
+    //            // Add to first available slot
+    //            for (int i = 0; i < ThisInstance.ItemList.childCount; i++)
+    //            {
+    //                Transform Item = ThisInstance.ItemList.GetChild(i);
+    //                // If item is not active, then it becomes new slot
+    //                if (!Item.gameObject.activeSelf)
+    //                {
+    //                    Item.GetComponent<Image>().sprite = GO.GetComponent<PickUp>().GUI_Icon;
+    //                    Item.gameObject.SetActive(true);
+    //                    return;
+    //                }
+    //            }
+    //        }
+
+    //    }
+
+
+    //    public static void RemoveItem()
+    //    { if (Input.GetKeyDown(KeyCode.U))
+    //        {
+    //            Transform itemToRemove = ThisInstance.ItemList.GetChild(0);
+    //            GameObject GO = itemToRemove.gameObject;
+
+    //            foreach (Collider C in GO.GetComponents<Collider>())
+    //                C.enabled = true;
+
+    //            foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
+    //                MR.enabled = true;
+
+    //            GO.SetActive(true);
+
+    //            GameObject iconToRemove = GameObject.FindGameObjectWithTag("ItemSlot00");
+    //            iconToRemove.GetComponent<SpriteRenderer>().enabled = false;
+    //            Inventory.Instance.removeOneFromInventory();
+    //        }
+    //    }
+    //}
+
