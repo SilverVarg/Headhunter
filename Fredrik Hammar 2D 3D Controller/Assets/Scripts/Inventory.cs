@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     protected int objectsInInventory = 0;
+    
     public void CountInventory()
     {
         objectsInInventory++;
@@ -20,6 +21,8 @@ public class Inventory : MonoBehaviour
     {
         return objectsInInventory;
     }
+    
+
     // Property for maintaining single instance
     public static Inventory Instance
     {
@@ -63,7 +66,7 @@ public class Inventory : MonoBehaviour
     public static void Start()
     {
 
-        ThisInstance.GetComponent<Inventory>();
+        
 
     }
 
@@ -81,11 +84,11 @@ public class Inventory : MonoBehaviour
  
     public static void AddItem(GameObject GO)
 
-    {
         {
+        
             // Disable all colliders for added object
             foreach (Collider C in GO.GetComponents<Collider>())
-                    C.enabled = false;
+                C.enabled = false;
 
             // Disable renderers
             foreach (MeshRenderer MR in GO.GetComponents<MeshRenderer>())
@@ -95,19 +98,19 @@ public class Inventory : MonoBehaviour
             for (int i = 0; i < ThisInstance.ItemList.childCount; i++)
             {
                 Transform Item = ThisInstance.ItemList.GetChild(i);
+
                 // If item is not active, then it becomes new slot
                 if (!Item.gameObject.activeSelf)
                 {
-                
                     Item.GetComponent<Image>().sprite = GO.GetComponent<InventoryItem>().GUI_Icon;
-
                     Item.gameObject.SetActive(true);
                     return;
                 }
             }
+        
         }
 
-    }
+    
 
 
     //public static void RemoveItem()
