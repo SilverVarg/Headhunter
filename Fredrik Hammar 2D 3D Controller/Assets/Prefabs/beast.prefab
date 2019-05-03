@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8960857499505375774}
   - component: {fileID: 7508166961717838111}
   - component: {fileID: 3747439337048384608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: beast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

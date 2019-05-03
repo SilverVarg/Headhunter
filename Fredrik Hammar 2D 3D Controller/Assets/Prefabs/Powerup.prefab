@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5099043315171365201}
   - component: {fileID: 5099043315171365207}
   - component: {fileID: 5099043315171365206}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Powerup
   m_TagString: InventoryItem
   m_Icon: {fileID: 0}

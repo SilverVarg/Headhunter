@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4511233318641305577}
   - component: {fileID: 4511233318641305571}
   - component: {fileID: 4511233318641305570}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Oilcan
   m_TagString: InventoryItem
   m_Icon: {fileID: 0}

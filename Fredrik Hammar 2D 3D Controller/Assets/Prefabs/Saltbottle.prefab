@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2750902047193988236}
   - component: {fileID: 2750902047193988238}
   - component: {fileID: 2750902047193988225}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Saltbottle
   m_TagString: InventoryItem
   m_Icon: {fileID: 0}
