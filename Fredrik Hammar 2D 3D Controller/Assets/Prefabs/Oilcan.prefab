@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42ca15742066f749b86e5a8dc0bbf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   GUI_Icon: {fileID: 21300000, guid: e105cc0de15282743b7461e19c98312d, type: 3}
 --- !u!54 &4511233318641305570
 Rigidbody:
