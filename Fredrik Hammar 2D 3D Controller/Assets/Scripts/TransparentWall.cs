@@ -42,13 +42,14 @@ public class TransparentWall : MonoBehaviour
 
                 Renderer.material = material;
                 this.gameObject.layer = LayerMask.NameToLayer("Transparent");
-                player.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
+              //  player.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
 
             }
             else if (!(playerStateHandler.current.GetType().Equals(nonCorporeal.GetType())) && this.gameObject.layer == LayerMask.NameToLayer("Transparent") || !CanSeePlayer())
             {
                 if (PlayerInWall)
                 {
+                    Debug.Log("PlayerInWall");
                     speed += 1f * Time.deltaTime;
                     TreD.nullMovement();
                     if( calculateEnterpoint == false){
@@ -73,7 +74,7 @@ public class TransparentWall : MonoBehaviour
                         Debug.Log("hited");
                         Renderer.material = originalMaterial;
                         this.gameObject.layer = LayerMask.NameToLayer("Geometry");
-                        player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+                      //  player.layer = LayerMask.NameToLayer("PlayerCorporeal");
                         speed = OriginalSpeed;
                         calculateEnterpoint = false;
                         PlayerInWall = false;
@@ -86,7 +87,7 @@ public class TransparentWall : MonoBehaviour
                     
                     Renderer.material = originalMaterial;
                     this.gameObject.layer = LayerMask.NameToLayer("Geometry");
-                    player.layer = LayerMask.NameToLayer("PlayerCorporeal");
+                   // player.layer = LayerMask.NameToLayer("PlayerCorporeal");
                     calculateEnterpoint = false;
                     PlayerInWall = false;
                 }
@@ -100,9 +101,10 @@ public class TransparentWall : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        //Debug.Log("Playerhit1");
+        Debug.Log("Phit1");
         if (col.gameObject.tag == "Player")
         {
+            Debug.Log("Playerhit1");
             RaycastHit ray = TreD.getHitWall();
             EnterPoint = player.transform.position;
             
@@ -112,6 +114,7 @@ public class TransparentWall : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            Debug.Log("Playerhit2");
             PlayerInWall = true;
         }
     }

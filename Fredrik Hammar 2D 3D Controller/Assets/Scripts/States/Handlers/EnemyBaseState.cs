@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBaseState : EnemyState
 {
-    [SerializeField] protected float moveSpeed;
+    
     [SerializeField] protected Material material;
 
     private FieldOfViewDetection FOV;

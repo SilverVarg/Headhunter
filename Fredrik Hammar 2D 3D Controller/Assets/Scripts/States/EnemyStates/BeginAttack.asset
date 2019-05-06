@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c7fe23c5af88441ada579ece5476fc, type: 3}
   m_Name: BeginAttack
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 99c3df54326918840956aae1711b1c0d, type: 2}
+  waitSecond: 0.3
+  StartLeapWhenThisClose: 10

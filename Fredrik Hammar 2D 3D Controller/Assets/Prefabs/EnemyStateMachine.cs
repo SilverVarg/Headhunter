@@ -8,7 +8,7 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private EnemyState[] states;
 
     private Dictionary<Type, EnemyState> stateDictionary = new Dictionary<Type, EnemyState>();
-    public static EnemyState currentState;
+    public EnemyState currentState;
 
     protected virtual void Awake()
     {
