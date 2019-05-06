@@ -32,12 +32,12 @@ public class FieldOfViewDetection : MonoBehaviour
         Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
     }
 
-    public static bool inFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
+    public bool inFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
     {
-        Collider[] overlaps = new Collider[100];
+        Collider[] overlaps = new Collider[10];
         int count = Physics.OverlapSphereNonAlloc(checkingObject.position, maxRadius, overlaps);
 
-        for (int i = 0; i < count + 1; i++)
+        for (int i = 0; i < count; i++)
         {
             if (overlaps[i] != null)
             {
@@ -56,9 +56,7 @@ public class FieldOfViewDetection : MonoBehaviour
                         if (Physics.Raycast(ray, out hit, maxRadius))
                         {
                             if (hit.transform == target)
-                            {
                                 return true;
-                            }
                         }
                     }
                 }

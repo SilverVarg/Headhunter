@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 4113603263962365824}
   - component: {fileID: 4113603263962365825}
   - component: {fileID: 4113603263962365826}
-  - component: {fileID: 4113603263962365829}
   - component: {fileID: 4113603263962365947}
   - component: {fileID: 4113603263962365828}
-  - component: {fileID: 4113603263962365946}
   - component: {fileID: 4113603263962365945}
   - component: {fileID: 4113603263962365944}
   m_Layer: 8
@@ -110,24 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e990b10c270ef4c995c1de09f57eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 45
+  maxAngle: 30
   maxRadius: 30
   player: {fileID: 0}
---- !u!114 &4113603263962365829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4113603263962365827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e924199e2c8d78e4e9b58675051deb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  startWaitTime: 1
-  moveSpots: []
 --- !u!143 &4113603263962365947
 CharacterController:
   m_ObjectHideFlags: 0
@@ -159,28 +142,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states:
-  - {fileID: 11400000, guid: 3f4c51e7e53ebaf42a6fc7804454ed20, type: 2}
+  - {fileID: 11400000, guid: 5945ee13cee57ed4a90815842ceea7dd, type: 2}
   - {fileID: 11400000, guid: 0524606e8c665de439ba25bc7874775a, type: 2}
   - {fileID: 11400000, guid: 269a1e9ce7cf61847932b085eefa2d01, type: 2}
   - {fileID: 11400000, guid: 173e831e7f865514f8a7f81f087b157d, type: 2}
+  currentState: {fileID: 0}
   enemyRenderer: {fileID: 0}
   visionMask:
     serializedVersion: 2
     m_Bits: 2048
+  FallingVision:
+    serializedVersion: 2
+    m_Bits: 256
+  moveSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  charcon: {fileID: 0}
   player: {fileID: 0}
---- !u!114 &4113603263962365946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4113603263962365827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1dc157558612a40beb12c2c518a9b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
 --- !u!65 &4113603263962365945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -208,5 +187,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
