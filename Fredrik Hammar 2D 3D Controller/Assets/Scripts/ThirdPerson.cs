@@ -30,8 +30,7 @@ public class ThirdPerson : MonoBehaviour
         currentX += Input.GetAxisRaw("Mouse X") * sensitivityX;
         currentY += Input.GetAxisRaw("Mouse Y") * sensitivityY;
         currentY = Mathf.Clamp(currentY, minXY, MaxXY);
-       
-        //   player.Rotate(0, currentY, 0);
+     //   player.Rotate(0, currentY, 0);
     }
     // Update is called once per frame
     void LateUpdate()
@@ -40,13 +39,6 @@ public class ThirdPerson : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         camTransform.position = lookAt.position + rotation * dir;
         camTransform.LookAt(lookAt.position);
-        player.transform.rotation = cam.transform.rotation;
-        player.transform.rotation = Quaternion.Euler(0, player.transform.eulerAngles.y, 0); 
-       
-       // player.transform.localEulerAngles = cam.transform.rotation;
-       //  player.transform.localEulerAngles = new Vector3(0f, player.transform.rotation.y, 0f);
-       // player.transform.rotation = Quaternion.Euler(0f, transform.rotation.y, 0f);
-       // transform.rotation = Quaternion.Euler(0f, transform.rotation.y, 0f);
         bool PlayerToCam = Physics.Linecast(player.position, camTransform.position, out CameraRayCast, layerToCollideWith,0);
         Debug.DrawLine(player.position, camTransform.position, Color.red, 1);
         if (PlayerToCam)

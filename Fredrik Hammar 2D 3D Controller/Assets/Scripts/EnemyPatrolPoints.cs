@@ -50,11 +50,11 @@ public class EnemyPatrolPoints : MonoBehaviour
             {
                 if (waitTime <= 0)
                 {
-                   // Debug.Log("hitSpot");
+                    Debug.Log("hitSpot");
                     Aposition++;
                     if (Aposition > moveSpots.Length - 1)
                     {
-                       // Debug.Log("hitSpot2" + moveSpots.Length + "this is not the array" + Aposition);
+                        Debug.Log("hitSpot2" + moveSpots.Length + "this is not the array" + Aposition);
                         Aposition = 0;
                     }
                     randomSpot = Aposition;

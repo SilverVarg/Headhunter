@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33ead9de1222fd429275f24d4a39e26, type: 3}
   m_Name: Leap
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: b4eb9f94c9a57904587b528e9fa59529, type: 2}
-  Jumpadjust: 0.4
-  HeightAjust: 1
+  moveSpeed: 0
+  material: {fileID: 0}
