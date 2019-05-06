@@ -5,11 +5,11 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     // Start is called before the first frame update
-   
+
     public GameObject Player;
     public GameObject Item;
     private SpelarentreD TreD;
-    private bool thisobjectisheld = false;
+    [HideInInspector] public bool thisobjectisheld = false;
     private Rigidbody rigid;
     private float turnSpeed = 5000f;
     private Transform ItemPlacer;

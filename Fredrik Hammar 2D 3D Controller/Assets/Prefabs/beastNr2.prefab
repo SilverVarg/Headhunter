@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e990b10c270ef4c995c1de09f57eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 30
-  maxRadius: 30
+  maxAngle: 25
+  maxRadius: 20
   player: {fileID: 0}
 --- !u!114 &4113603263962365829
 MonoBehaviour:
@@ -163,6 +163,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0524606e8c665de439ba25bc7874775a, type: 2}
   - {fileID: 11400000, guid: 269a1e9ce7cf61847932b085eefa2d01, type: 2}
   - {fileID: 11400000, guid: 173e831e7f865514f8a7f81f087b157d, type: 2}
+  currentState: {fileID: 0}
   enemyRenderer: {fileID: 0}
   visionMask:
     serializedVersion: 2
