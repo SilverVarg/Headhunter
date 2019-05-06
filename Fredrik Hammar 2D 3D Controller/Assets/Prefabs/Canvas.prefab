@@ -330,7 +330,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Children:
   - {fileID: 3230968324364466575}
   m_Father: {fileID: 3128403762996777113}
@@ -487,7 +486,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Children:
   - {fileID: 9100593582644545595}
   m_Father: {fileID: 3128403762996777113}
@@ -745,7 +743,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Children:
   - {fileID: 9124061217810480285}
   m_Father: {fileID: 3128403762996777113}
