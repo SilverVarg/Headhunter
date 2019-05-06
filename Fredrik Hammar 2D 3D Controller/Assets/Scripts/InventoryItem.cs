@@ -2,57 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class InventoryItem : MonoBehaviour
 {
-
-    public enum ITEMTYPE { OILCAN, POWERUP, SALTBOTTLE };
+    public enum ITEMTYPE { BALL, BALL2, BALL3 };
     public ITEMTYPE Type;
     public Sprite GUI_Icon = null;
 
-    void OnTriggerEnter(Collider Col)
+    void Update()
     {
-        if (!Col.CompareTag("Player"))
-            return;
+        if (CompareTag("InventoryItem") && Input.GetKeyDown(KeyCode.E))
+        {
+            //CheckPickUp(GetComponent<Collider>());
 
-        
-       // Add this item to the inventory
-        Inventory.AddItem(gameObject);
-        Debug.Log("Added object");
-        
+            Inventory.AddItem(gameObject);
+        }
     }
-
-
-
-
-    void Start()
-    {
-
-
-    }
-
-
-    //void Update(Collider Col)
-    //{
-    //    if (Input.GetKeyDown(KeyCode.E) && !Col.CompareTag("Player") && )
-    //        return;
-
-    //    // Add this item to the inventory
-    //    Inventory.AddItem(gameObject);
-
-    //if (Input.GetKeyDown(KeyCode.E))
-    //{
-    //    if (CompareTag("Saltbottle") || CompareTag("Powerup") || CompareTag("Oilcan") && (player.transform.position - this.transform.position).sqrMagnitude < 3 * 3)
-    //    {
-    //        //CheckPickUp(GetComponent<Collider>());
-    //        if (transform.parent = null)
-    //        {
-    //            Inventory.AddItem(gameObject);
-    //        }
-
-    //    }
-    //}
-
 
     //void CheckPickUp(Collider Col)
     //{
@@ -61,6 +25,5 @@ public class InventoryItem : MonoBehaviour
 
     //    Inventory.AddItem(gameObject);
     //}
-
 
 }

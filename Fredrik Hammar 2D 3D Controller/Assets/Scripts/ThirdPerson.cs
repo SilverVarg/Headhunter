@@ -10,14 +10,14 @@ public class ThirdPerson : MonoBehaviour
     public LayerMask layerToCollideWith;
 
     private Camera cam;
-    private float distance = 10f;
+    public float distance = 3f;
     private float currentX = 0.0f;
     private float currentY = 0.0f;
     public float sensitivityX = 4.0f;
     public float sensitivityY = 1.0f;
     private RaycastHit CameraRayCast;
-    float minXY = 1;
-    float MaxXY = 50;
+    float minXY = -20;
+    float MaxXY = 70;
     //  private float MouseSensitivity = 1f;
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class ThirdPerson : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 dir = new Vector3(0, 0, -distance);
+        Vector3 dir = new Vector3(-distance, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         camTransform.position = lookAt.position + rotation * dir;
         camTransform.LookAt(lookAt.position);

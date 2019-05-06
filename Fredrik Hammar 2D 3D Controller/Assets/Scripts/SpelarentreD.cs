@@ -96,7 +96,10 @@ public class SpelarentreD : MonoBehaviour
           //  Jumping = true;
            // movement += Vector3.up * jumpdistance;
         }
-         movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+        if (!grounded)
+        {
+            movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+        }
         if (grounded2 && toground == true)
         {
             toground = false;
