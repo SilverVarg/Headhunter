@@ -10,7 +10,9 @@ TagManager:
   - ItemSlot01
   - Inventory
   - ItemSlot00
-  - Wall
+  - Saltbottle
+  - Powerup
+  - Oilcan
   layers:
   - Default
   - TransparentFX

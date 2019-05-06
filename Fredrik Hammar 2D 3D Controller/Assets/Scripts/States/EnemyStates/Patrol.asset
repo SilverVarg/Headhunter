@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3b1748f45ca3c4e9e2bb4e3166db58, type: 3}
   m_Name: Patrol
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  material: {fileID: 2100000, guid: b47ad36790fd3104ca44bbbf6e079597, type: 2}
-  speed: 10
-  startWaitTime: 0.1
+  moveSpeed: 0
+  material: {fileID: 0}

@@ -41,14 +41,9 @@ public class SpelarentreD : MonoBehaviour
     [HideInInspector] public PlayerStateHandler playerStateHandler;
     public GameObject theCamera;
     private bool Jumping = false;
-    private float timer = 0;
     Vector3 Snap = new Vector3(0f, 0f, 0f);
 
-    public Transform JumpTarget;
-    private Vector3 realJUmpTarget;
-    private Vector3 originalPosition;
-    public float JumpForwardDistance;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +73,7 @@ public class SpelarentreD : MonoBehaviour
         //  movement += direction * acceleration * Time.deltaTime;
         grounded = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, Vector2.down, out rayCast2, groundCheckDistance + skinWidth, layerToCollideWith);
         bool grounded2 = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, Vector2.down, out rayCast3,  skinWidth, layerToCollideWith);
-        
+        VelocityMovmement();
 
         
         if (movement != new Vector3(0, 0f, 0f))
@@ -87,26 +82,21 @@ public class SpelarentreD : MonoBehaviour
         }
         bool jump = Input.GetKeyDown(KeyCode.Space);
         sprinting = Input.GetKey(KeyCode.LeftShift);
-        VelocityMovmement();
+        
         if (grounded && rayCast2.normal.magnitude == 1)
         {
           //  Debug.Log("magn" + rayCast2.distance);
          // transform.rotation = Quaternion.LookRotation(Vector3.Exclude(rayCast2.normal, transform.forward), rayCast2.normal);
         }
-        if (grounded && jump )
+        if (grounded && jump)
         {
-          
-            
             Debug.Log("jump");
-            movement.y +=  jumpdistance * 10 * Time.deltaTime;
-            realJUmpTarget = JumpTarget.position;
-            originalPosition = transform.position;
-             movement += transform.forward * Time.deltaTime;
-            Jumping = true;
-           
+           movement += Vector3.up * 10f;// jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime;
+           // Debug.Log("jump");
+          //  Jumping = true;
            // movement += Vector3.up * jumpdistance;
         }
-        
+         movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
         if (grounded2 && toground == true)
         {
             toground = false;
@@ -118,41 +108,35 @@ public class SpelarentreD : MonoBehaviour
           //  movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
         }
         if (Jumping) {
-            timer += 1 * Time.deltaTime;
-            movement.y += jumpdistance * 10 * Time.deltaTime;
-            movement += transform.forward * JumpForwardDistance* Time.deltaTime;
+            movement.y +=  jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime;
             Debug.Log("Jumpheight" + ( jumpdistance * Time.deltaTime - 10 * Time.deltaTime * Time.deltaTime));
-            if (timer > 0.1)
-            {
-                
-                // Debug.Log("jump");
-                Jumping = false;
-                timer = 0;
-            }
-
-        }
+          
+         }
        
-           
-      
-        movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
-
 
 
         bool capsuleCast = Physics.CapsuleCast(transform.position + point1, transform.position + point2, capsuleCollider.radius, movement.normalized, movement.magnitude + skinWidth, layerToCollideWith);
 
         
 
-   
+        Ray ray = new Ray(rayCast.point, transform.position);
+        Debug.DrawRay(transform.position, rayCast.point, Color.cyan, 5f);
+        Debug.DrawLine(transform.position, rayCast.point, Color.green);
 
 
 
+        bool hitcollider = true;
+        if(capsuleCast == false)
+        {
+            hitcollider = false;
+        }
         collision(); 
       
         if (grounded && movement != new Vector3(0f,0f,0f) && !Jumping)
         {
          //   Quaternion fa = Quaternion.LookRotation(movement);
-        //    transform.rotation = Quaternion.LookRotation(movement);
-           // transform.rotation = Quaternion.Euler(0f,transform.rotation.y, 0f);
+            transform.rotation = Quaternion.LookRotation(movement);
+            transform.rotation = Quaternion.Euler(0f,transform.rotation.y, 0f);
         }
         //Debug.Log(movement);
         //    movement *= Mathf.Pow(airResistance, Time.deltaTime);
@@ -160,10 +144,10 @@ public class SpelarentreD : MonoBehaviour
         Snap = new Vector3(0f, 0f, 0f);
         acceleration = originalAcceleration;
         maxspeed = Originalmaxspeed;
-        if (grounded2 && Jumping)
+        if (grounded && Jumping)
         {
             //Debug.Log("hitGround");
-           // Jumping = false;
+            Jumping = false;
         }
     }
     public void collision()
@@ -197,7 +181,7 @@ public class SpelarentreD : MonoBehaviour
     {
         if(Vector3.Dot(velocity, normal) > 0)
         {
-          //  return Vector3.zero;
+            return Vector3.zero;
         }
         Vector3 projection = Vector3.Dot(velocity, normal) * normal;
         return -projection;

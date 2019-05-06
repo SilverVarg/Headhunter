@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4113603263962365946}
   - component: {fileID: 4113603263962365945}
   - component: {fileID: 4113603263962365944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Guard2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
