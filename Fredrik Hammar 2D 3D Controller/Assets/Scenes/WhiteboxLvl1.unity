@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 9497953}
   - component: {fileID: 9497952}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System_Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9203,7 +9203,8 @@ AudioSource:
   m_GameObject: {fileID: 392093729}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.3
@@ -9330,7 +9331,8 @@ AudioSource:
   m_GameObject: {fileID: 392093729}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
@@ -9426,7 +9428,8 @@ AudioSource:
   m_GameObject: {fileID: 392093729}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.3
@@ -9746,6 +9749,12 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7051735177729246920, guid: 8c50414e431d36045b190c2d7d672ce0,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c50414e431d36045b190c2d7d672ce0, type: 3}
 --- !u!4 &398125784 stripped
@@ -15151,6 +15160,12 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7051735177729246920, guid: 8c50414e431d36045b190c2d7d672ce0,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c50414e431d36045b190c2d7d672ce0, type: 3}
 --- !u!4 &776506343 stripped
@@ -16236,6 +16251,12 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7051735177729246920, guid: 8c50414e431d36045b190c2d7d672ce0,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c50414e431d36045b190c2d7d672ce0, type: 3}
 --- !u!4 &858209414 stripped
@@ -17592,6 +17613,12 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7051735177729246920, guid: 8c50414e431d36045b190c2d7d672ce0,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c50414e431d36045b190c2d7d672ce0, type: 3}
 --- !u!4 &1012535741 stripped
@@ -18980,6 +19007,12 @@ PrefabInstance:
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8761725297240719809, guid: a79fd67986148844ab5bbaaf2affe701,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79fd67986148844ab5bbaaf2affe701, type: 3}
 --- !u!4 &1165525112 stripped
@@ -20184,6 +20217,12 @@ PrefabInstance:
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8761725297240719809, guid: a79fd67986148844ab5bbaaf2affe701,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79fd67986148844ab5bbaaf2affe701, type: 3}
 --- !u!1 &1293224603
@@ -23819,6 +23858,12 @@ PrefabInstance:
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].outWeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8761725297240719809, guid: a79fd67986148844ab5bbaaf2affe701,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79fd67986148844ab5bbaaf2affe701, type: 3}
 --- !u!1001 &1596105005
@@ -28962,6 +29007,12 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 3.6666636
       objectReference: {fileID: 0}
+    - target: {fileID: 3765617037968332284, guid: c5f2ad74668568b468ae82cadeb18d37,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e919e3daddfc27c4385a8ba50333cee7,
+        type: 2}
     - target: {fileID: 1081425928742825465, guid: c5f2ad74668568b468ae82cadeb18d37,
         type: 3}
       propertyPath: goal
