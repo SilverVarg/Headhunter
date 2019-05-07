@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public GameObject optionsScreen;
     public GameObject creditsScreen;
+    public GameObject audioScreen;
     public GameObject controlsScreen;
     public GameObject continueButton;
 
@@ -14,6 +15,7 @@ public class MenuController : MonoBehaviour
     {
         optionsScreen.SetActive(false);
         creditsScreen.SetActive(false);
+        audioScreen.SetActive(false);
         controlsScreen.SetActive(false);
         continueButton.SetActive(false);
 
@@ -51,6 +53,11 @@ public class MenuController : MonoBehaviour
         optionsScreen.SetActive(true);
     }
 
+    public void AudioScreen()
+    {
+        audioScreen.SetActive(true);
+    }
+
     public void ControlsScreen()
     {
         controlsScreen.SetActive(true);
@@ -70,6 +77,7 @@ public class MenuController : MonoBehaviour
     {
         creditsScreen.SetActive(false);
         optionsScreen.SetActive(false);
+        audioScreen.SetActive(false);
         controlsScreen.SetActive(false);
     }
 
