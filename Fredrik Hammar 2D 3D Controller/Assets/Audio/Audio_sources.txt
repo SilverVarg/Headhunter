@@ -1,0 +1,55 @@
+Audio sources
+
+Ambient_Wind: https://freesound.org/people/florianreichelt/sounds/459977/
+Beast_Bark: https://freesound.org/people/Dariachic/sounds/125574/ & https://freesound.org/people/esperri/sounds/118961/ & https://freesound.org/people/Mrthenoronha/sounds/420449/
+Beast_FurRuffle: https://freesound.org/people/ldezem/sounds/223357/
+Beast_HeavyBreathing: https://freesound.org/people/Under7dude/sounds/163383/
+BeastGrowl_Aggressive: https://freesound.org/people/Glitchedtones/sounds/372531/
+BeastGrowl_Base: https://freesound.org/people/newagesoup/sounds/338674/ & https://freesound.org/people/Suburbanwizard/sounds/449820/
+BeastGrowl_Base1: https://freesound.org/people/Pieguy360/sounds/171178/
+ClockTicking: https://freesound.org/people/kwahmah_02/sounds/256116/ & https://freesound.org/people/EdgardEdition/sounds/113093/
+Dark_ambience: https://freesound.org/people/PatrickLieberkind/sounds/244961/
+Door_Close: https://freesound.org/people/rivernile7/sounds/234244/
+DisappearingWall_Slide: https://freesound.org/people/dspeight/sounds/352363/
+DisappearingWall1 + DisappearingWall2: https://freesound.org/people/StephenSaldanha/sounds/121894/ & https://freesound.org/people/BOSS%20MUSIC/sounds/121800/
+Door_Open: https://freesound.org/people/corpocracy/sounds/403351/
+Door_Unlock: https://freesound.org/people/MihirFreeSound/sounds/410983/
+Drop_items: https://freesound.org/people/ryanharding95/sounds/272441/ & https://freesound.org/people/ecfike/sounds/130863/
+Drop_OneItem: https://freesound.org/people/ryanharding95/sounds/272441/
+Elixir_BottleBreak: https://freesound.org/people/unfa/sounds/221528/
+Elixir_Effect: https://freesound.org/people/Infernus2/sounds/423959/ & https://freesound.org/people/odilonmarcenaro/sounds/238564/
+Fire_Torch_Loop1: from the assets given for the sound tasks
+Footsteps_Player_Indoors: https://freesound.org/people/dkiller2204/sounds/366111/
+Footsteps_Player_Outdoors: https://freesound.org/people/revolt2563/sounds/352870/
+Graveyard: https://freesound.org/people/ShadyDave/sounds/273463/
+Guard_AttackTeleport: https://freesound.org/people/deleted_user_3277771/sounds/176741/ & https://freesound.org/people/PaulDihor/sounds/276912/
+Guard_Despawn: https://freesound.org/people/ansel/sounds/221613/
+Guard_Noise: https://freesound.org/people/Litruv/sounds/175944/
+GuardNoise_Hostile: https://freesound.org/people/Litruv/sounds/175944/ & https://freesound.org/people/AaronGNP/sounds/54616/
+GUI_click: https://freesound.org/people/kwahmah_02/sounds/256116/
+Hunted_Music: https://freesound.org/people/lennyboy/sounds/244417/ & https://freesound.org/people/ldk1609/sounds/56189/ 
+Jump_Sound: https://freesound.org/people/ShaneF91/sounds/386572/
+Land_Sound: https://freesound.org/people/Reitanna/sounds/332668/
+ominous_music: https://www.youtube.com/watch?v=QTFLYCMkyiM
+Owl1: https://freesound.org/people/edsward/sounds/351645/
+Owl2: https://freesound.org/people/Johnc/sounds/20684/
+Player_FabricRustle: https://freesound.org/people/humga/sounds/315749/
+Piano: https://freesound.org/people/ShadyDave/sounds/321496/
+Pickup1: https://freesound.org/people/jomse/sounds/428650/
+Pickup2: https://freesound.org/people/jomse/sounds/428651/
+Record: https://freesound.org/people/VlatkoBlazek/sounds/185719/
+	Vlatko Blažek
+	Varaždin, Croatia
+	e-mail: vlatkoblazek@gmail.com
+	http://www.freesound.org/people/VlatkoBlazek/
+Rope1: https://freesound.org/people/bennstir/sounds/81071/
+Rope2: https://freesound.org/people/JarredGibb/sounds/219499/
+Salt_Pour: https://freesound.org/people/mwmarsh/sounds/85932/
+Slot_Insert: https://freesound.org/people/LordForklift/sounds/448394/
+Songbird_PlayFail: https://freesound.org/people/SenseiTG/sounds/109122/
+Songbird_Windup: https://freesound.org/people/lmbubec/sounds/118816/
+Statue: https://freesound.org/people/ShadyDave/sounds/325611/
+State_Shift: https://freesound.org/people/dsp9000/sounds/76405/
+Wallphase_Enter & Wallphase_Exit: https://freesound.org/people/outroelison/sounds/150950/
+Well: https://freesound.org/people/ShadyDave/sounds/277447/
+Winch_sound: https://freesound.org/people/Robinhood76/sounds/60082/
