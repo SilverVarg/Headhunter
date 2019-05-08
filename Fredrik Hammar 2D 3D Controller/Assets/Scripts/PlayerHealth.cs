@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 100;
     private float damageTimer;
     public Renderer rend;
+    [HideInInspector] public bool damaged = false;
+    public GameObject GameControllerGameObject;
+    public Image DamageImage;
+    public float damageFlashSpeed = 3.0f;
+    private static Color FF0000;
+    public Color damageFlashColor = FF0000;
+    //public Image bloodsplatter;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +33,8 @@ public class PlayerHealth : MonoBehaviour
             rend.enabled = false;
 
         }
+
+        DamageFlash();
     }
 
     public void Harm(float dmg)
@@ -38,16 +48,16 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    //public void DamageFlash()
-    //{
-    //    if (damaged)
-    //    {
-    //        DamageImage.color = damageFlashColor;
-    //    }
-    //    else
-    //    {
-    //        DamageImage.color = Color.Lerp(DamageImage.color, Color.clear, damageFlashSpeed * Time.deltaTime;)
-    //    }
-    //    damaged = false;
-    //}
+    public void DamageFlash()
+    {
+        if (damaged)
+        {
+            DamageImage.color = damageFlashColor;
+        }
+        else
+        {
+            DamageImage.color = Color.Lerp(DamageImage.color, Color.clear, damageFlashSpeed * Time.deltaTime);
+        }
+        damaged = false;
+    }
 }

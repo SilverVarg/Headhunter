@@ -25,7 +25,7 @@ public class EnemyDamage : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.GetComponent<PlayerHealth>().Harm(damage);
-
+            other.GetComponent<PlayerHealth>().damaged = true;
         }
     }
 }
