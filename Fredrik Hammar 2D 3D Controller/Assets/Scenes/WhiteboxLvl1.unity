@@ -12254,7 +12254,7 @@ PrefabInstance:
     - target: {fileID: 7261173494524950703, guid: 889808fb603f6b347a49083dd6051571,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7261173494524950703, guid: 889808fb603f6b347a49083dd6051571,
         type: 3}
@@ -12280,6 +12280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: DamageImage
       value: 
+      objectReference: {fileID: 754974567}
+    - target: {fileID: 8240164964740301193, guid: 889808fb603f6b347a49083dd6051571,
+        type: 3}
+      propertyPath: damageFlashColor.a
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 3222365683053130704, guid: 889808fb603f6b347a49083dd6051571,
         type: 3}
@@ -14992,7 +14997,7 @@ PrefabInstance:
     - target: {fileID: 5288946542460850453, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5288946542460850453, guid: de1f79ebd6af2e84ea106a8f71fb1210,
         type: 3}
@@ -15515,6 +15520,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87df7928a2f664a46b525b870db44250, type: 3}
+--- !u!114 &754974567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8717508070278163807, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
+    type: 3}
+  m_PrefabInstance: {fileID: 3128403762500896923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &757862862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18693,7 +18710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d109c7cec13ff5349b8fecb57a5d0799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 1037042413}
   playerHealth: 0
 --- !u!4 &1007514023
 Transform:
@@ -19019,6 +19036,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1030707541}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1037042413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1390439268280966592, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
+    type: 3}
+  m_PrefabInstance: {fileID: 3128403762500896923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1052225357
 GameObject:
   m_ObjectHideFlags: 0
@@ -19202,10 +19231,6 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100172, guid: b235179bd2a63d1468dd430670338c55, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100326, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
@@ -19513,6 +19538,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 100326, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 100328, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -19559,7 +19588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31161,7 +31190,7 @@ PrefabInstance:
     - target: {fileID: 9017389962553328887, guid: c5f2ad74668568b468ae82cadeb18d37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9017389962553328887, guid: c5f2ad74668568b468ae82cadeb18d37,
         type: 3}
@@ -32727,7 +32756,7 @@ PrefabInstance:
     - target: {fileID: 3128403762996777113, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3128403762996777113, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
         type: 3}
@@ -32804,6 +32833,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8209768361694691290, guid: e5c3ec3ba3badda4c87c7d04c720ff62,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1037042413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5c3ec3ba3badda4c87c7d04c720ff62, type: 3}
 --- !u!1 &3128403762500896924 stripped
