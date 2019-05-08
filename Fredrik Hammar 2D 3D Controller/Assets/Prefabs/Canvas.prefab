@@ -597,6 +597,51 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!1 &470153850636451924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314406389855015727}
+  - component: {fileID: 8209768361694691290}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1314406389855015727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470153850636451924}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -990.46783, y: -485.09756, z: 134.37282}
+  m_LocalScale: {x: 2.9767442, y: 2.9767442, z: 2.9767442}
+  m_Children: []
+  m_Father: {fileID: 3128403762996777113}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8209768361694691290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470153850636451924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d109c7cec13ff5349b8fecb57a5d0799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+  playerHealth: 0
 --- !u!1 &489345856990849196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,6 +2069,7 @@ RectTransform:
   - {fileID: 7479801032342687867}
   - {fileID: 2382281623715296579}
   - {fileID: 7845339640901285776}
+  - {fileID: 1314406389855015727}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3178,7 +3224,7 @@ GameObject:
   - component: {fileID: 6088443049472751611}
   - component: {fileID: 4951297517258195249}
   m_Layer: 5
-  m_Name: Safe_text
+  m_Name: Portal_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3246,8 +3292,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nearly there, but the lock on the safe is rusted shut! \nGet some oil and
-    then find the key!"
+  m_Text: Real close now! This portal stone must be the final roadblock. All it needs
+    is to be activated.
 --- !u!1 &6102953699257347153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3898,7 +3944,7 @@ GameObject:
   - component: {fileID: 8176472904953372409}
   - component: {fileID: 4924530130713160175}
   m_Layer: 5
-  m_Name: Guard_text
+  m_Name: GuardAndObjective_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3964,8 +4010,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Careful! The guards in here are no joke. Luckily, they dislike the sound
-    of music playing. '
+  m_Text: "If you were your head, where would you be? \nOh, wait. Second floor it
+    is then!\nBut these guards are no joke. How about a tune to keep your spirit up?"
 --- !u!1 &6696662251389807542
 GameObject:
   m_ObjectHideFlags: 0
