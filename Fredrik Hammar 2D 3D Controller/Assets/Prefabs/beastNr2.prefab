@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 4113603263962365944}
   - component: {fileID: 3039676382401225156}
   - component: {fileID: 7879111699044529157}
+  - component: {fileID: 7916132800045054461}
   m_Layer: 8
   m_Name: beastNr2
   m_TagString: Untagged
@@ -916,3 +917,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7916132800045054461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113603263962365827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75eb0960b0a314f4ea028d6370054156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
