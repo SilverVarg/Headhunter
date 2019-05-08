@@ -38,16 +38,16 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    public void DamageFlash()
-    {
-        if (damaged)
-        {
-            DamageImage.color = damageFlashColor;
-        }
-        else
-        {
-            DamageImage.color = Color.Lerp(DamageImage.color, Color.clear, damageFlashSpeed * Time.deltaTime;)
-        }
-        damaged = false;
-    }
+    //public void DamageFlash()
+    //{
+    //    if (damaged)
+    //    {
+    //        DamageImage.color = damageFlashColor;
+    //    }
+    //    else
+    //    {
+    //        DamageImage.color = Color.Lerp(DamageImage.color, Color.clear, damageFlashSpeed * Time.deltaTime;)
+    //    }
+    //    damaged = false;
+    //}
 }
