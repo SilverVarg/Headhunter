@@ -641,8 +641,8 @@ MonoBehaviour:
   current: {fileID: 0}
   CanvasUiNr1: {fileID: 0}
   ActiveState: {fileID: 0}
-  ActiveGhostMode: {fileID: 21300000, guid: 31bb882cffe56a244998095e11472bfd, type: 3}
-  NonActiveGhostMode: {fileID: 21300000, guid: 5183d4d3ffde555488bb9a500ecd983b, type: 3}
+  ActiveGhostMode: {fileID: 21300000, guid: 5183d4d3ffde555488bb9a500ecd983b, type: 3}
+  NonActiveGhostMode: {fileID: 21300000, guid: 31bb882cffe56a244998095e11472bfd, type: 3}
 --- !u!81 &2079187973
 AudioListener:
   m_ObjectHideFlags: 0

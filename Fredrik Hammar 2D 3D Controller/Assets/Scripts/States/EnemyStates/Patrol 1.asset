@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Patrol 1
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 7917cdd92dc8553459644748e8578fed, type: 2}
-  speed: 15
+  speed: 5
   startWaitTime: 0.1
   gravityStrength: 3
