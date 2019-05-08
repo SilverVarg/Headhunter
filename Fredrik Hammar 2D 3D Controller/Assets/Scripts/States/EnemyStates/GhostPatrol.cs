@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Enemy/Patrolling")]
-public class PatrollingState : EnemyBaseState
+[CreateAssetMenu(menuName = "Enemy/GhostPatrol")]
+public class GhostPatrol : EnemyBaseState
 {
     private float waitTime;
     private int randomSpot;
@@ -22,7 +22,7 @@ public class PatrollingState : EnemyBaseState
     void Start()
     {
         //  owner.gameObject.layer = LayerMask.NameToLayer("PlayerCorporeal");
-        
+
         waitTime = startWaitTime;
         randomSpot = 0;
     }
@@ -31,7 +31,7 @@ public class PatrollingState : EnemyBaseState
     public override void HandleUpdate()
     {
         timer += 1 * Time.deltaTime;
-        if(timer > 1 && !timerChecked)
+        if (timer > 1 && !timerChecked)
         {
             checkIfAtStandStill = owner.transform.position;
             timerChecked = true;
@@ -40,8 +40,8 @@ public class PatrollingState : EnemyBaseState
         {
             if (Vector3.Distance(owner.transform.position, checkIfAtStandStill) < 0.1f)
             {
-               // Debug.Log("NotMoving");
-                BackTrack = (owner.transform.forward * -1) ;
+                // Debug.Log("NotMoving");
+                BackTrack = (owner.transform.forward * -1);
                 BackwardsMove = true;
             }
             else
@@ -49,10 +49,10 @@ public class PatrollingState : EnemyBaseState
                 timerChecked = false;
                 timer = 0;
             }
-          
-               
+
+
         }
-      
+
         //  owner.transform.position += new Vector3(0, -6, 0) * gravityStrength * Time.deltaTime;
         //transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
         // find the target position relative to the player:
@@ -97,32 +97,32 @@ public class PatrollingState : EnemyBaseState
         //   transform.rotation = Quaternion.Euler(0f, Quaternion.LookRotation(movement).y, 0f);
 
         if (Vector3.Distance(owner.transform.position, owner.moveSpots[randomSpot].position) < 0.5f)
+        {
+            if (waitTime <= 0)
             {
-                if (waitTime <= 0)
+                // Debug.Log("hitSpot");
+                Aposition++;
+                if (Aposition > owner.moveSpots.Length - 1)
                 {
-                    // Debug.Log("hitSpot");
-                    Aposition++;
-                    if (Aposition > owner.moveSpots.Length - 1)
-                    {
                     Debug.Log(Aposition);
-                        // Debug.Log("hitSpot2" + moveSpots.Length + "this is not the array" + Aposition);
-                        Aposition = 0;
-                    }
-                    randomSpot = Aposition;
-                    waitTime = startWaitTime;
+                    // Debug.Log("hitSpot2" + moveSpots.Length + "this is not the array" + Aposition);
+                    Aposition = 0;
+                }
+                randomSpot = Aposition;
+                waitTime = startWaitTime;
 
-                }
-                else
-                {
-                    waitTime -= Time.deltaTime;
-                }
             }
-        
+            else
+            {
+                waitTime -= Time.deltaTime;
+            }
+        }
+
 
         if (InFOV() == true && IsThePlayerAGhost() == false)
         {
-          //  setPatrol(false);
-            owner.Transition<BeginAttackState>();
+            //  setPatrol(false);
+            owner.Transition<GhostChase>();
         }
     }
 
