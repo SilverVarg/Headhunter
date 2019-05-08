@@ -132,10 +132,12 @@ public class SpelarentreD : MonoBehaviour
             }
 
         }
-       
-           
-      
-        movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+
+        if (!grounded)
+        {
+
+            movement += new Vector3(0, -1, 0) * gravityStrength * Time.deltaTime;
+        }
 
 
 
