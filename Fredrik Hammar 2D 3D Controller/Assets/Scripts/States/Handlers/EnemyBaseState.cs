@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyBaseState : EnemyState
 {
-    [SerializeField] protected float moveSpeed;
+    
     [SerializeField] protected Material material;
 
     private FieldOfViewDetection FOV;
     protected EnemyStateHandler owner;
     private EnemyPatrolPoints PatrolPoints;
     private Boxleap boxleap;
+    private SpelarentreD TreD;
+    private PlayerStateHandler playerStateHandler;
+    
 
     public override void Enter()
     {
@@ -18,6 +21,7 @@ public class EnemyBaseState : EnemyState
         FOV = owner.GetComponent<FieldOfViewDetection>();
         PatrolPoints = owner.GetComponent<EnemyPatrolPoints>();
         boxleap = owner.GetComponent<Boxleap>();
+        playerStateHandler = owner.player.GetComponent<PlayerStateHandler>();
         // owner.enemyAgent.speed = moveSpeed;
     }
 
@@ -34,10 +38,22 @@ public class EnemyBaseState : EnemyState
     {
         return FOV.getInFov();
     }
-    protected void setPatrol(bool patrol)
+    protected bool IsThePlayerAGhost()
     {
-        PatrolPoints.setPatrolling(patrol);
+        Debug.Log(playerStateHandler.current.name);
+   //     string Name = playerStateHandler.current.GetType();
+        if (playerStateHandler.current.name == "NonCoporealState(Clone)")
+        {
+            Debug.Log("GHOSTIE");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+   
     }
+   
     protected void SetLeap(bool set)
     {
         boxleap.setStopJump(set);
@@ -46,4 +62,5 @@ public class EnemyBaseState : EnemyState
     {
        return boxleap.getJumpBool();
     }
+
 }

@@ -49,11 +49,11 @@ public class Boxleap : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player1");
+        
         if (other.tag == "Player")
         {
-            Debug.Log("Player2");
-            Application.LoadLevel(0);
+          //  Debug.Log("Player2");
+         //   Application.LoadLevel(0);
         }
     }
 }
