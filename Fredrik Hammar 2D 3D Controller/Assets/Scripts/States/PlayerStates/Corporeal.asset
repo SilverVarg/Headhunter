@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Corporeal
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 15dc0f4709b2df946bd2648b0926169c, type: 2}

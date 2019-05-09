@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerBaseState : State
 {
     // Attributes
-    [SerializeField] protected float moveSpeed;
     [SerializeField] protected Material material;
 
     protected PlayerStateHandler owner;
@@ -14,7 +13,7 @@ public class PlayerBaseState : State
     public override void Enter()
     {
         owner.Renderer.material = material;
-     //   owner.agent.speed = moveSpeed;
+    
     }
 
     public override void Initialize(StateMachine owner)

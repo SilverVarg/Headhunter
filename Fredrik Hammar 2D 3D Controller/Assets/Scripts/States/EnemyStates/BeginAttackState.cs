@@ -19,7 +19,10 @@ public class BeginAttackState : EnemyBaseState
     // Update is called once per frame
     public override void HandleUpdate()
     {
-        PlayerlastKnownLocation = owner.player.transform.position;
+        if(owner.Disable == true)
+        {
+            owner.Transition<Disabled>();
+        }
         if (InFOV() == false || IsThePlayerAGhost() == true)
         {
             Debug.Log("chasing last known location" + PlayerlastKnownLocation);
@@ -41,6 +44,7 @@ public class BeginAttackState : EnemyBaseState
             owner.transform.LookAt(owner.player.transform.position);
             owner.transform.position = Vector3.MoveTowards(owner.transform.position, owner.player.transform.position, speed * Time.deltaTime);
             // owner.transform.rotation = Quaternion.LookRotation(owner.player.transform.position);
+            PlayerlastKnownLocation = owner.player.transform.position;
             if (Vector3.Distance(owner.transform.position, owner.player.transform.position) < StartLeapWhenThisClose)
             {
                // owner.rigid.useGravity = false;

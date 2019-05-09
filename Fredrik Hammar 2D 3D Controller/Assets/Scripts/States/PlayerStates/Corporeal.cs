@@ -20,7 +20,6 @@ public class Corporeal : PlayerBaseState
             Debug.Log("ChangeState");
             owner.gameObject.layer = 11;
             Debug.Log(owner.gameObject.layer);
-            // owner.gameObject.layer = LayerMask.NameToLayer("PlayerCorporeal");
             owner.ActiveState.sprite = owner.NonActiveGhostMode;
             doThisOnce = false;
         }

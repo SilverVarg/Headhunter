@@ -40,7 +40,6 @@ public class GhostChase : EnemyBaseState
         {
             owner.transform.LookAt(owner.player.transform.position);
             owner.transform.position = Vector3.MoveTowards(owner.transform.position, owner.player.transform.position, speed * Time.deltaTime);
-            // owner.transform.rotation = Quaternion.LookRotation(owner.player.transform.position);
            
             PlayerlastKnownLocation = owner.player.transform.position;
 

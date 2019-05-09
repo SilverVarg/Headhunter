@@ -10,8 +10,7 @@ public class NonCorporeal : PlayerBaseState
     {
       
 
-        // Player = owner.GetComponent<SpelarentreD>();
-        //   Player.Corporeal = false;
+     
     }
     
 
@@ -23,7 +22,6 @@ public class NonCorporeal : PlayerBaseState
             Debug.Log("ChangeState");
             owner.gameObject.layer = 12;
             Debug.Log(owner.gameObject.layer);
-           // owner.gameObject.layer = LayerMask.NameToLayer("PlayerNonCorporeal");
             owner.ActiveState.sprite = owner.ActiveGhostMode;
             doThisOnceNonCorporeal = false;
         }

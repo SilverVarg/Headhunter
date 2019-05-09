@@ -9,9 +9,7 @@ public class EnemyBaseState : EnemyState
 
     private FieldOfViewDetection FOV;
     protected EnemyStateHandler owner;
-    private EnemyPatrolPoints PatrolPoints;
-    private Boxleap boxleap;
-    private SpelarentreD TreD;
+    private SpelarenTreDController TreD;
     private PlayerStateHandler playerStateHandler;
     
 
@@ -19,10 +17,7 @@ public class EnemyBaseState : EnemyState
     {
         owner.enemyRenderer.material = material;
         FOV = owner.GetComponent<FieldOfViewDetection>();
-        PatrolPoints = owner.GetComponent<EnemyPatrolPoints>();
-        boxleap = owner.GetComponent<Boxleap>();
         playerStateHandler = owner.player.GetComponent<PlayerStateHandler>();
-        // owner.enemyAgent.speed = moveSpeed;
     }
 
     public override void Initialize(EnemyStateMachine owner)
@@ -41,10 +36,9 @@ public class EnemyBaseState : EnemyState
     protected bool IsThePlayerAGhost()
     {
         Debug.Log(playerStateHandler.current.name);
-   //     string Name = playerStateHandler.current.GetType();
         if (playerStateHandler.current.name == "NonCoporealState(Clone)")
         {
-            Debug.Log("GHOSTIE");
+          
             return true;
         }
         else
@@ -54,13 +48,7 @@ public class EnemyBaseState : EnemyState
    
     }
    
-    protected void SetLeap(bool set)
-    {
-        boxleap.setStopJump(set);
-    }
-    protected bool getJump()
-    {
-       return boxleap.getJumpBool();
-    }
+  
+   
 
 }

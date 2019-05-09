@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1336940606010731412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909220299003122529}
+  m_Layer: 11
+  m_Name: JumpTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1909220299003122529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336940606010731412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.31, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7261173494524950703}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3616199845902055888
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +584,7 @@ Transform:
   - {fileID: 7261173493929830816}
   - {fileID: 7261173493755253580}
   - {fileID: 649426242273116134}
+  - {fileID: 1909220299003122529}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 127.57, z: 0}
@@ -633,16 +664,14 @@ MonoBehaviour:
   gravityStrength: 10
   skinWidth: 0.05
   deceleration: 3
-  maxspeed: 0.1
   sprintMaxSpeed: 0.2
   turnSpeedModifier: 2
   groundCheckDistance: 0.1
   jumpdistance: 3
-  MouseSensitivity: 0
+  maxspeed: 0.1
   dynamicFriction: 0.2
   airResistance: 0.5
   staticFriction: 0.6
-  objectHeld: 0
   nonCorporeal: {fileID: 11400000, guid: 912e09977bb955e4193383b63e888349, type: 2}
   layerToCollideWith:
     serializedVersion: 2
@@ -666,6 +695,7 @@ MonoBehaviour:
   states:
   - {fileID: 11400000, guid: f6f780ec9ff0c864087c2790ab36dfdf, type: 2}
   - {fileID: 11400000, guid: 912e09977bb955e4193383b63e888349, type: 2}
+  currentState: {fileID: 0}
   Renderer: {fileID: 0}
   visionMask:
     serializedVersion: 2

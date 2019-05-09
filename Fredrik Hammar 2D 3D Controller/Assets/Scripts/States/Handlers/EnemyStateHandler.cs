@@ -14,16 +14,17 @@ public class EnemyStateHandler : EnemyStateMachine
     [HideInInspector] public CharacterController charcon;
     public GameObject player;
     public GameObject Leaptarget;
+    [HideInInspector] public bool Disable = false;
     [HideInInspector] public Vector3 target;
     [HideInInspector] public Rigidbody rigid;
     [HideInInspector] public BoxCollider boxCollider;
 
-    //  private FieldOfViewDetection FOV;
+    private FieldOfViewDetection FOV;
 
 
     protected override void Awake()
     {
-        // FOV = GetComponent<FieldOfViewDetection>();
+        FOV = GetComponent<FieldOfViewDetection>();
         boxCollider = GetComponent<BoxCollider>();
         enemyRenderer = GetComponent<MeshRenderer>();
         charcon = GetComponent<CharacterController>();
@@ -50,6 +51,10 @@ public class EnemyStateHandler : EnemyStateMachine
         {
             PlayerInArea = false;
         }
+    }
+    public void SetDisabled(bool d)
+    {
+        Disable = d;
     }
 
 }

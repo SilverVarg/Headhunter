@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Scan
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 1b0f7da1431ba6d4aafcca96957f45dc, type: 2}
-  waitSecond: 1
+  waitSecond: 0.7

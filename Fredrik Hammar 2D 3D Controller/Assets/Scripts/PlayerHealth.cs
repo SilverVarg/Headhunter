@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         GameController.gameControllerInstance.playerHealth = health;
         if (health < 0)
         {
+            SceneManager.LoadScene(1);
             rend = GetComponent<MeshRenderer>();
             rend.enabled = false;
 

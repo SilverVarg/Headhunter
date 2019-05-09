@@ -4,24 +4,28 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Enemy/Patrolling")]
 public class PatrollingState : EnemyBaseState
 {
+    private float timer = 0;
     private float waitTime;
     private int randomSpot;
-    public float speed;
-    private bool patrolling = true;
-    public float startWaitTime;
-    private RaycastHit rayCast;
-    public float gravityStrength = 3;
     private int Aposition = 0;
-    private float timer = 0;
+ 
     private Vector3 checkIfAtStandStill;
     private Vector3 BackTrack;
     private bool BackwardsMove = false;
     private bool timerChecked = false;
+    private bool patrolling = true;
+
+    public float speed;
+    public float startWaitTime;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //  owner.gameObject.layer = LayerMask.NameToLayer("PlayerCorporeal");
+       
         
         waitTime = startWaitTime;
         randomSpot = 0;
@@ -30,6 +34,10 @@ public class PatrollingState : EnemyBaseState
     // Update is called once per frame
     public override void HandleUpdate()
     {
+        if (owner.Disable == true)
+        {
+            owner.Transition<Disabled>();
+        }
         timer += 1 * Time.deltaTime;
         if(timer > 1 && !timerChecked)
         {
@@ -53,9 +61,7 @@ public class PatrollingState : EnemyBaseState
                
         }
       
-        //  owner.transform.position += new Vector3(0, -6, 0) * gravityStrength * Time.deltaTime;
-        //transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-        // find the target position relative to the player:
+       
         if (!BackwardsMove)
         {
             Vector3 dir = owner.moveSpots[randomSpot].position - owner.transform.position;
@@ -78,7 +84,7 @@ public class PatrollingState : EnemyBaseState
                 Debug.Log("Nocharcon");
             }
             owner.transform.rotation = Quaternion.LookRotation(movement);
-            //   owner.transform.rotation = Quaternion.Euler(0f, Quaternion.LookRotation(movement).y, 0f);
+         
             owner.transform.rotation = Quaternion.Euler(0, owner.transform.eulerAngles.y, 0);
         }
         if (BackwardsMove)
@@ -100,12 +106,12 @@ public class PatrollingState : EnemyBaseState
             {
                 if (waitTime <= 0)
                 {
-                    // Debug.Log("hitSpot");
+                  
                     Aposition++;
                     if (Aposition > owner.moveSpots.Length - 1)
                     {
-                    Debug.Log(Aposition);
-                        // Debug.Log("hitSpot2" + moveSpots.Length + "this is not the array" + Aposition);
+                    
+                        
                         Aposition = 0;
                     }
                     randomSpot = Aposition;
@@ -121,7 +127,7 @@ public class PatrollingState : EnemyBaseState
 
         if (InFOV() == true && IsThePlayerAGhost() == false)
         {
-          //  setPatrol(false);
+        
             owner.Transition<BeginAttackState>();
         }
     }

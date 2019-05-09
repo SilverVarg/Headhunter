@@ -6,11 +6,11 @@ public class ScanState : EnemyBaseState
 {
     private float rotationleft = 360;
     private float rotationspeed = 100;
-    private RaycastHit rayCast;
+    private float speed = 10;
+
     private bool enterScan = true;
     public float waitSecond = 1f;
-    private float speed = 10;
-    private bool Checkground;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,29 +20,21 @@ public class ScanState : EnemyBaseState
     // Update is called once per frame
     public override void HandleUpdate()
     {
+        if (owner.Disable == true)
+        {
+            owner.Transition<Disabled>();
+        }
         if (enterScan)
         {
             
-            if (Vector3.Distance(owner.transform.position, owner.Leaptarget.transform.position) < 1f)
-            {
-                Debug.Log("hitWAll");
-              //  owner.transform.position = Vector3.MoveTowards( owner.transform.position,transform.forward * -1, speed * Time.deltaTime);
-            }
+         
             owner.StartCoroutine(WaitfewSecs());
            
             
         }
         if (!enterScan)
         {
-            Checkground = Physics.Linecast(owner.transform.position, owner.transform.position + Vector3.down * 100, out rayCast, owner.FallingVision);
-            Debug.DrawLine(owner.transform.position, owner.transform.position + Vector3.down * 100, Color.blue, 4);
-            if (Checkground)
-            {
-                //  Debug.Log("enterScan");
-                // Debug.Log("hitraycast");
-
-                //   owner.transform.position = new Vector3(owner.transform.position.x, rayCast.point.y, owner.transform.position.z);
-            }
+          
             float rotation = rotationspeed * Time.deltaTime;
             if (rotationleft > rotation)
             {
@@ -55,7 +47,6 @@ public class ScanState : EnemyBaseState
             }
             if (rotation == 0)
             {
-                // setPatrol(true);
                 enterScan = true;
                 owner.Transition<PatrollingState>();
             }
@@ -63,7 +54,6 @@ public class ScanState : EnemyBaseState
 
             if (InFOV() == true && IsThePlayerAGhost() == false)
             {
-                // setPatrol(false);
                 Debug.Log("enterbeginAttackFromScan");
 
                 enterScan = true;

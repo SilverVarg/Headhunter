@@ -10,7 +10,6 @@ public class GhostPatrol : EnemyBaseState
     private bool patrolling = true;
     public float startWaitTime;
     private RaycastHit rayCast;
-    public float gravityStrength = 3;
     private int Aposition = 0;
     private float timer = 0;
     private Vector3 checkIfAtStandStill;
@@ -40,7 +39,6 @@ public class GhostPatrol : EnemyBaseState
         {
             if (Vector3.Distance(owner.transform.position, checkIfAtStandStill) < 0.1f)
             {
-                // Debug.Log("NotMoving");
                 BackTrack = (owner.transform.forward * -1);
                 BackwardsMove = true;
             }
@@ -53,9 +51,6 @@ public class GhostPatrol : EnemyBaseState
 
         }
 
-        //  owner.transform.position += new Vector3(0, -6, 0) * gravityStrength * Time.deltaTime;
-        //transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-        // find the target position relative to the player:
         if (!BackwardsMove)
         {
             Vector3 dir = owner.moveSpots[randomSpot].position - owner.transform.position;
@@ -78,7 +73,6 @@ public class GhostPatrol : EnemyBaseState
                 Debug.Log("Nocharcon");
             }
             owner.transform.rotation = Quaternion.LookRotation(movement);
-            //   owner.transform.rotation = Quaternion.Euler(0f, Quaternion.LookRotation(movement).y, 0f);
             owner.transform.rotation = Quaternion.Euler(0, owner.transform.eulerAngles.y, 0);
         }
         if (BackwardsMove)

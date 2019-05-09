@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 99c3df54326918840956aae1711b1c0d, type: 2}
   waitSecond: 0.3
-  StartLeapWhenThisClose: 10
+  StartLeapWhenThisClose: 8
